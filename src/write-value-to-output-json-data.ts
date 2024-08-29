@@ -18,6 +18,14 @@ export const writeValueToOutputJSONData = (
     const key = splitKey[0];
     const currentArrayValueForKey = input.outputJSONData?.[key];
 
+    if(
+      valueOrNestedValueIsNestedValue(valueToPush)
+      && Object.keys(valueToPush).length === 0
+      && currentArrayValueForKey !== undefined
+    ) {
+      return input.outputJSONData;
+    }
+
     if( currentArrayValueForKey === undefined || (
       valueOrNestedValueIsNestedValue(currentArrayValueForKey)
       && Object.keys(currentArrayValueForKey).length === 0
@@ -30,7 +38,7 @@ export const writeValueToOutputJSONData = (
 
     if(valueOrNestedValueIsStringArray(currentArrayValueForKey)) {
       if(!valueOrNestedValueIsStringArray(valueToPush)) {
-        throw new Error('');
+        throw new Error(`Attempted to concatenate non-array value to array. key=${key}`);
       }
 
       return {
@@ -45,7 +53,7 @@ export const writeValueToOutputJSONData = (
   const lowestValueKey = splitKey[0];
   const otherKeys = splitKey.slice(1);
 
-  const valueForLowestValueKey = input.outputJSONData.lowestValueKey
+  const valueForLowestValueKey = input.outputJSONData?.[lowestValueKey]
 
   if(!valueOrNestedValueIsNestedValue(valueForLowestValueKey)) {
     throw new Error(`Cannot mix JSON values with string and string array values on the same key. Key: ${input.currentKeyToPushTo}`);

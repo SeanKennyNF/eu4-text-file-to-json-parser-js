@@ -25,7 +25,7 @@ export const parseEu4TextFileToJson = async(
   for(const rawFileRow of rawFileRows) {
     const cleanedRow = rawFileRow
       .trim()
-      .replaceAll(/#.+$/g, '')
+      .replaceAll(/#.*$/g, '')
       .trim();
 
     if(!cleanedRow) {
@@ -35,6 +35,7 @@ export const parseEu4TextFileToJson = async(
       const splitCleanedRow = cleanedRow.split('=').map((element) => element.trim());
       const propertyName = splitCleanedRow[0];
       currentKeyToPushTo = `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? '.' : ''}${propertyName}`;
+
       outputJSONData = writeValueToOutputJSONData({
         outputJSONData,
         currentKeyToPushTo,
