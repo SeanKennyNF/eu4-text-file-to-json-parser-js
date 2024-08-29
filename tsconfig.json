@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "rootDirs": ["src"],
+    "outDir": "build",
+    "lib": ["es2022"],
+    "strict": true,
+    "target": "es2022",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "types": ["node"]
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
