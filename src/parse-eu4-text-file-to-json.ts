@@ -74,7 +74,7 @@ export const parseEu4TextFileToJson = async(
       
       outputJSONData = writeValueToOutputJSONData({
         outputJSONData,
-        currentKeyToPushTo: propertyName,
+        currentKeyToPushTo: `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? '.' : ''}${propertyName}`,
         valueToPush: value.at(0) === '"' && value.at(-1) === '"'
           ? value.slice(1, -1)
           : value

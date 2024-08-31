@@ -133,6 +133,18 @@ tree = { 3 4 7 10 }
   "tree": ["3", "4", "7", "10"]
 }
 ```
+```
+add_core = I43
+culture = green_orc
+add_core = I34
+```
+
+```
+{
+  "add_core": ["I43", "I34"],
+  "culture": "green_orc"
+}
+```
 
 More full examples are available by perusing the `/test/sample-inputs` and `/test/expected-outputs` folders in the repository.
 
