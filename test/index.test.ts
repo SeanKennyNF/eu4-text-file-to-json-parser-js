@@ -16,6 +16,14 @@ const testCases = [{
   inputFilename: 'trade-winds.txt',
   artifactFilename: 'trade-winds-output.json',
   expectedOutputFilename: 'trade-winds-expected-output.json'
+}, {
+  inputFilename: 'climate.txt',
+  artifactFilename: 'climate-output.json',
+  expectedOutputFilename: 'climate-expected-output.json'
+}, {
+  inputFilename: 'default-map.txt',
+  artifactFilename: 'default-map-output.json',
+  expectedOutputFilename: 'default-map-expected-output.json'
 }];
 
 test.each(testCases)('parseEu4TextFileToJson should produce the right input for $inputFilename', async({
