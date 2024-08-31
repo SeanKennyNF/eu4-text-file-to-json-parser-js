@@ -8,3 +8,4 @@
 ## Version 0.1.1 - August 30th 2024
 
 - Supported lines in the form `property_name = { ... }`. For example, `tree = { 3 4 7 10 }` parses to `"tree": ["3","4","7","10"]`
+- Small improvement to an error message.
