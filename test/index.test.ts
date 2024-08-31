@@ -24,6 +24,10 @@ const testCases = [{
   inputFilename: 'default-map.txt',
   artifactFilename: 'default-map-output.json',
   expectedOutputFilename: 'default-map-expected-output.json'
+}, {
+  inputFilename: 'ovdal-lodhum.txt',
+  artifactFilename: 'ovdal-lodhum-output.json',
+  expectedOutputFilename: 'ovdal-lodhum-expected-output.json'
 }];
 
 test.each(testCases)('parseEu4TextFileToJson should produce the right input for $inputFilename', async({

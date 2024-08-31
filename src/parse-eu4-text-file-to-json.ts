@@ -36,13 +36,14 @@ export const parseEu4TextFileToJson = async(
       const propertyName = splitCleanedRow[0];
       const elements = splitCleanedRow[1]
         .slice(1, -1)
-        .trim()
-        .split(' ')
-      currentKeyToPushTo = `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? '.' : ''}${propertyName}`;
+        .split("\"")
+        .flatMap((element, index) => index % 2 === 0 ? element.split(" ") : [ element ])
+        .map((element) => element.trim())
+        .filter((element) => element !== '');
 
       outputJSONData = writeValueToOutputJSONData({
         outputJSONData,
-        currentKeyToPushTo,
+        currentKeyToPushTo: `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? '.' : ''}${propertyName}`,
         valueToPush: elements
       })
     } else if(/^([a-zA-Z0-9_])+(\ )*=(\ )*{$/.test(cleanedRow)) {
@@ -79,8 +80,10 @@ export const parseEu4TextFileToJson = async(
     } else {
       // If we reached this point, it means that we should be inside an array and this value represents a value inside that array.
       const arrayValues = cleanedRow
-        .split(' ')
-        .map((element) => element.trim());
+        .split("\"")
+        .flatMap((element, index) => index % 2 === 0 ? element.split(" ") : [ element ])
+        .map((element) => element.trim())
+        .filter((element) => element !== '');
 
       outputJSONData = writeValueToOutputJSONData({
         outputJSONData,

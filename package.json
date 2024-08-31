@@ -1,6 +1,6 @@
 {
   "name": "@sean_kenny/eu4-text-file-to-json-parser-js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A library for reading text files in the format EU4 encodes it's game data in.",
   "scripts": {
     "build": "tsc",
