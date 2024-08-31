@@ -1,5 +1,5 @@
 import { OutputJSONData } from "./parse-eu4-text-file-to-json.js";
-import { valueOrNestedValueIsNestedValue, valueOrNestedValueIsStringArray } from "./value-or-nested-value.js";
+import { valueOrNestedValueIsNestedValue, valueOrNestedValueIsString, valueOrNestedValueIsStringArray } from "./value-or-nested-value.js";
 
 interface WriteValueToOutputJSONDataInput {
   currentKeyToPushTo: string;
@@ -17,6 +17,32 @@ export const writeValueToOutputJSONData = (
   if(splitKey.length === 1) {
     const key = splitKey[0];
     const currentArrayValueForKey = input.outputJSONData?.[key];
+
+    if(
+      valueOrNestedValueIsString(valueToPush) &&
+      valueOrNestedValueIsString(currentArrayValueForKey)
+    ) {
+      return {
+        ...input.outputJSONData,
+        [key]: [
+          currentArrayValueForKey,
+          valueToPush
+        ]
+      };
+    }
+
+    if(
+      valueOrNestedValueIsString(valueToPush) &&
+      valueOrNestedValueIsStringArray(currentArrayValueForKey)
+    ) {
+      return {
+        ...input.outputJSONData,
+        [key]: [
+          ...currentArrayValueForKey,
+          valueToPush
+        ]
+      };
+    }
 
     if(
       valueOrNestedValueIsNestedValue(valueToPush)
