@@ -9,3 +9,8 @@
 
 - Supported lines in the form `property_name = { ... }`. For example, `tree = { 3 4 7 10 }` parses to `"tree": ["3","4","7","10"]`
 - Small improvement to an error message.
+
+## Version 0.1.2 - August 31st 2024
+
+- Improved handling for values which are two words. For example, `ship_names = { Advantage "Golden Lion" }` now parses to `"ship_names": ["Advantage", "Golden Lion"]` instead of `"ship_names": ["Advantage", "\"Golden", "Lion\""]`
+- Fixed bugs where double spaces would save `""` entries in arrays.
