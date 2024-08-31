@@ -124,6 +124,16 @@ leechdens_region = {
 }
 ```
 
+```
+tree = { 3 4 7 10 }
+```
+
+```
+{
+  "tree": ["3", "4", "7", "10"]
+}
+```
+
 More full examples are available by perusing the `/test/sample-inputs` and `/test/expected-outputs` folders in the repository.
 
 

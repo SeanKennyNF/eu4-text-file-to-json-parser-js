@@ -30,6 +30,21 @@ export const parseEu4TextFileToJson = async(
 
     if(!cleanedRow) {
       //Do nothing, this is either an empty line or was a comment before our cleaning.
+    } else if(/^([a-zA-Z0-9_])+(\ )*=(\ )*{([a-zA-Z0-9_\ ])*}$/.test(cleanedRow)) {
+      // This is in the format "property_name = { ... }"
+      const splitCleanedRow = cleanedRow.split('=').map((element) => element.trim());
+      const propertyName = splitCleanedRow[0];
+      const elements = splitCleanedRow[1]
+        .slice(1, -1)
+        .trim()
+        .split(' ')
+      currentKeyToPushTo = `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? '.' : ''}${propertyName}`;
+
+      outputJSONData = writeValueToOutputJSONData({
+        outputJSONData,
+        currentKeyToPushTo,
+        valueToPush: elements
+      })
     } else if(/^([a-zA-Z0-9_])+(\ )*=(\ )*{$/.test(cleanedRow)) {
       // This is in the format "property_name = {"
       const splitCleanedRow = cleanedRow.split('=').map((element) => element.trim());

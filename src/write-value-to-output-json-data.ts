@@ -47,7 +47,7 @@ export const writeValueToOutputJSONData = (
       };
     }
 
-    throw new Error('');
+    throw new Error(`Error writing key value pair. Key:"${key}", value:"${valueToPush.toString().slice(0,50)}"`);
   }
 
   const lowestValueKey = splitKey[0];
