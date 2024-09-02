@@ -20,6 +20,6 @@
 - Supported `"`, `.`, `\`, ` `, and `'` as valid characters in field values.
 - Fixed a bug which would cause some values such as `rivers = "rivers.bmp"` to parse to `"rivers": "\"rivers.bmp\""` instead of `"rivers": "rivers.bmp"`
 
-## Version 0.1.4 - August 31st
+## Version 0.1.4 - August 31st 2024
 
 - Supported multiple assignments to the same string valued property. For example if a file contains a line which is `add_core = I43` and later has the line `add_core = I34`, in the final file, the property in the json file will be `"add_core": ["I43", "I34"]`.

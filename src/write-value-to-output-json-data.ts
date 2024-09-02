@@ -12,8 +12,6 @@ export const writeValueToOutputJSONData = (
 ): OutputJSONData => {
   const { valueToPush } = input;
 
-  console.log(input, 'input')
-
   const splitKey = input.currentKeyToPushTo.split('.');
 
   if(splitKey.length === 1) {
@@ -69,6 +67,14 @@ export const writeValueToOutputJSONData = (
         ...input.outputJSONData,
         [key]: valueToPush
       };
+    }
+
+    if(
+      valueOrNestedValueIsStringArray(currentArrayValueForKey) && 
+      valueOrNestedValueIsNestedValue(valueToPush) &&
+      Object.keys(valueToPush).length === 0
+    ) {
+      return input.outputJSONData;
     }
 
     if(valueOrNestedValueIsStringArray(currentArrayValueForKey)) {
