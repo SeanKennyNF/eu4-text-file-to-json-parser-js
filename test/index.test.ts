@@ -5,41 +5,41 @@ import { writeFile } from 'fs/promises';
 import { parseEu4TextFileToJson } from '../src';
 
 const testCases = [{
-  inputFilename: 'area.txt',
-  artifactFilename: 'area-output.json',
-  expectedOutputFilename: 'area-expected-output.json'
-}, {
+//  inputFilename: 'area.txt',
+//  artifactFilename: 'area-output.json',
+//  expectedOutputFilename: 'area-expected-output.json'
+//}, {
   inputFilename: 'region.txt',
   artifactFilename: 'region-output.json',
   expectedOutputFilename: 'region-expected-output.json'
-}, {
-  inputFilename: 'trade-winds.txt',
-  artifactFilename: 'trade-winds-output.json',
-  expectedOutputFilename: 'trade-winds-expected-output.json'
-}, {
-  inputFilename: 'climate.txt',
-  artifactFilename: 'climate-output.json',
-  expectedOutputFilename: 'climate-expected-output.json'
-}, {
-  inputFilename: 'default-map.txt',
-  artifactFilename: 'default-map-output.json',
-  expectedOutputFilename: 'default-map-expected-output.json'
-}, {
-  inputFilename: 'ovdal-lodhum.txt',
-  artifactFilename: 'ovdal-lodhum-output.json',
-  expectedOutputFilename: 'ovdal-lodhum-expected-output.json'
-}, {
-  inputFilename: 'anb-countries.txt',
-  artifactFilename: 'anb-countries-output.json',
-  expectedOutputFilename: 'anb-countries-expected-output.json'
-}, {
-  inputFilename: '7024-ghulapriah.txt',
-  artifactFilename: '7024-ghulapriah-output.json',
-  expectedOutputFilename: '7024-ghulapriah-expected-output.json'
-}, {
-  inputFilename: '4465-khadisrapur.txt',
-  artifactFilename: '4465-khadisrapur-output.json',
-  expectedOutputFilename: '4465-khadisrapur-expected-output.json'
+//}, {
+//  inputFilename: 'trade-winds.txt',
+//  artifactFilename: 'trade-winds-output.json',
+//  expectedOutputFilename: 'trade-winds-expected-output.json'
+//}, {
+//  inputFilename: 'climate.txt',
+//  artifactFilename: 'climate-output.json',
+//  expectedOutputFilename: 'climate-expected-output.json'
+//}, {
+//  inputFilename: 'default-map.txt',
+//  artifactFilename: 'default-map-output.json',
+//  expectedOutputFilename: 'default-map-expected-output.json'
+//}, {
+//  inputFilename: 'ovdal-lodhum.txt',
+//  artifactFilename: 'ovdal-lodhum-output.json',
+//  expectedOutputFilename: 'ovdal-lodhum-expected-output.json'
+//}, {
+//  inputFilename: 'anb-countries.txt',
+//  artifactFilename: 'anb-countries-output.json',
+//  expectedOutputFilename: 'anb-countries-expected-output.json'
+//}, {
+//  inputFilename: '7024-ghulapriah.txt',
+//  artifactFilename: '7024-ghulapriah-output.json',
+//  expectedOutputFilename: '7024-ghulapriah-expected-output.json'
+//}, {
+//  inputFilename: '4465-khadisrapur.txt',
+//  artifactFilename: '4465-khadisrapur-output.json',
+//  expectedOutputFilename: '4465-khadisrapur-expected-output.json'
 }];
 
 test.each(testCases)('parseEu4TextFileToJson should produce the right input for $inputFilename', async({

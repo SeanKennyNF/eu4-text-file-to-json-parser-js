@@ -1,5 +1,5 @@
 import { OutputJSONData } from "./parse-eu4-text-file-to-json.js";
-import { valueOrNestedValueIsNestedValue, valueOrNestedValueIsString, valueOrNestedValueIsStringArray } from "./value-or-nested-value.js";
+import { valueOrNestedValueIsNestedValue, valueOrNestedValueIsNestedValueArray, valueOrNestedValueIsString, valueOrNestedValueIsStringArray } from "./value-or-nested-value.js";
 
 interface WriteValueToOutputJSONDataInput {
   currentKeyToPushTo: string;
@@ -11,6 +11,8 @@ export const writeValueToOutputJSONData = (
   input: WriteValueToOutputJSONDataInput
 ): OutputJSONData => {
   const { valueToPush } = input;
+
+  console.log(input, 'input')
 
   const splitKey = input.currentKeyToPushTo.split('.');
 
@@ -48,8 +50,15 @@ export const writeValueToOutputJSONData = (
       valueOrNestedValueIsNestedValue(valueToPush)
       && Object.keys(valueToPush).length === 0
       && currentArrayValueForKey !== undefined
+      && valueOrNestedValueIsNestedValue(currentArrayValueForKey)
     ) {
-      return input.outputJSONData;
+      return {
+        ...input.outputJSONData,
+        [key]: [
+          currentArrayValueForKey,
+          valueToPush
+        ]
+      }
     }
 
     if( currentArrayValueForKey === undefined || (
@@ -80,6 +89,20 @@ export const writeValueToOutputJSONData = (
   const otherKeys = splitKey.slice(1);
 
   const valueForLowestValueKey = input.outputJSONData?.[lowestValueKey]
+
+  if(valueOrNestedValueIsNestedValueArray(valueForLowestValueKey)) {
+    return {
+      ...input.outputJSONData,
+      [lowestValueKey]: [
+        ...valueForLowestValueKey.slice(0, 1),
+        writeValueToOutputJSONData({
+          outputJSONData: valueForLowestValueKey.at(-1) ?? {},
+          currentKeyToPushTo: otherKeys.join('.'),
+          valueToPush
+        })
+      ]
+    }
+  }
 
   if(!valueOrNestedValueIsNestedValue(valueForLowestValueKey)) {
     throw new Error(`Cannot mix JSON values with string and string array values on the same key. Key: ${input.currentKeyToPushTo}`);

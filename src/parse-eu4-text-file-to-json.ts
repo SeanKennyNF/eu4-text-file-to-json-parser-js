@@ -45,7 +45,7 @@ export const parseEu4TextFileToJson = async(
         outputJSONData,
         currentKeyToPushTo: `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? '.' : ''}${propertyName}`,
         valueToPush: elements
-      })
+      });
     } else if(/^([a-zA-Z0-9_])+(\ )*=(\ )*{$/.test(cleanedRow)) {
       // This is in the format "property_name = {"
       const splitCleanedRow = cleanedRow.split('=').map((element) => element.trim());
@@ -56,7 +56,7 @@ export const parseEu4TextFileToJson = async(
         outputJSONData,
         currentKeyToPushTo,
         valueToPush: {}
-      })
+      });
     } else if(/^}$/.test(cleanedRow)) {
       // This is a closing brace
       if(currentKeyToPushTo === '') {

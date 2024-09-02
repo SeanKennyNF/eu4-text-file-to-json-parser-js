@@ -133,6 +133,7 @@ tree = { 3 4 7 10 }
   "tree": ["3", "4", "7", "10"]
 }
 ```
+
 ```
 add_core = I43
 culture = green_orc
