@@ -23,3 +23,28 @@
 ## Version 0.1.4 - August 31st 2024
 
 - Supported multiple assignments to the same string valued property. For example if a file contains a line which is `add_core = I43` and later has the line `add_core = I34`, in the final file, the property in the json file will be `"add_core": ["I43", "I34"]`.
+
+## Version 0.1.5 - September 1st 2024
+
+- Supported nested value array properties. The code below illustrates an example of what that means, the first block is the representation in the text file and the second is the json representation. This obviously impacts the types since values in format `[{"a": "b"}, {"a": "c"}]` were not previously a part of the valid return type but now are.
+```
+is_city = yes
+add_permanent_province_modifier = {
+	name = harimari_minority_coexisting_small
+	duration = -1
+}
+add_permanent_province_modifier = {
+	name = temple_complex
+	duration = -1
+}
+```
+
+```
+{
+  "is_city": "yes",
+  "add_permanent_province_modifier": [
+    { "name": "harimari_minority_coexisting_small", "duration": "-1" },
+    { "name": "temple_complex", "duration": "-1" }
+  ]
+}
+```

@@ -147,6 +147,28 @@ add_core = I34
 }
 ```
 
+```
+is_city = yes
+add_permanent_province_modifier = {
+	name = harimari_minority_coexisting_small
+	duration = -1
+}
+add_permanent_province_modifier = {
+	name = temple_complex
+	duration = -1
+}
+```
+
+```
+{
+  "is_city": "yes",
+  "add_permanent_province_modifier": [
+    { "name": "harimari_minority_coexisting_small", "duration": "-1" },
+    { "name": "temple_complex", "duration": "-1" }
+  ]
+}
+```
+
 More full examples are available by perusing the `/test/sample-inputs` and `/test/expected-outputs` folders in the repository.
 
 
