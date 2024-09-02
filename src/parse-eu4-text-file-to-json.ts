@@ -12,6 +12,9 @@ interface ParseEu4TextFileToJsonOutput {
 
 export type OutputJSONData = Record<string, ValueOrNestedValue<string>>;
 
+// All that really matters is that this value isn't used anywhere in the text file, we're treating it as a special character
+export const seperator = 'ЖЖЖЖЖЖЖЖЖЖ'
+
 export const parseEu4TextFileToJson = async(
   input: ParseEu4TextFileToJsonInput
 ): Promise<ParseEu4TextFileToJsonOutput> => {
@@ -30,7 +33,7 @@ export const parseEu4TextFileToJson = async(
 
     if(!cleanedRow) {
       //Do nothing, this is either an empty line or was a comment before our cleaning.
-    } else if(/^([a-zA-Z0-9_])+(\ )*=(\ )*{([a-zA-Z0-9_\ /".\-'])*}$/.test(cleanedRow)) {
+    } else if(/^([a-zA-Z0-9_\.])+(\ )*=(\ )*{([a-zA-Z0-9_\ /".\-'])*}$/.test(cleanedRow)) {
       // This is in the format "property_name = { ... }"
       const splitCleanedRow = cleanedRow.split('=').map((element) => element.trim());
       const propertyName = splitCleanedRow[0];
@@ -43,14 +46,14 @@ export const parseEu4TextFileToJson = async(
 
       outputJSONData = writeValueToOutputJSONData({
         outputJSONData,
-        currentKeyToPushTo: `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? '.' : ''}${propertyName}`,
+        currentKeyToPushTo: `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? seperator : ''}${propertyName}`,
         valueToPush: elements
       })
-    } else if(/^([a-zA-Z0-9_])+(\ )*=(\ )*{$/.test(cleanedRow)) {
+    } else if(/^([a-zA-Z0-9_\.])+(\ )*=(\ )*{$/.test(cleanedRow)) {
       // This is in the format "property_name = {"
       const splitCleanedRow = cleanedRow.split('=').map((element) => element.trim());
       const propertyName = splitCleanedRow[0];
-      currentKeyToPushTo = `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? '.' : ''}${propertyName}`;
+      currentKeyToPushTo = `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? seperator : ''}${propertyName}`;
 
       outputJSONData = writeValueToOutputJSONData({
         outputJSONData,
@@ -63,10 +66,10 @@ export const parseEu4TextFileToJson = async(
         throw new Error('Error parsing EU4 text file to JSON. ')
       }
       currentKeyToPushTo = currentKeyToPushTo
-        .split('.')
+        .split(seperator)
         .slice(0, -1)
-        .join('.');
-    } else if(/^([a-zA-Z0-9_])+(\ )*=(\ )*([a-zA-Z0-9 _./\-'"])+$/.test(cleanedRow)) {
+        .join(seperator);
+    } else if(/^([a-zA-Z0-9_\.])+(\ )*=(\ )*([a-zA-Z0-9 _./\-'"])+$/.test(cleanedRow)) {
       // This is in the format "property_name = value"
       const splitCleanedRow = cleanedRow.split('=').map((element) => element.trim());
       const propertyName = splitCleanedRow[0];
@@ -74,7 +77,7 @@ export const parseEu4TextFileToJson = async(
       
       outputJSONData = writeValueToOutputJSONData({
         outputJSONData,
-        currentKeyToPushTo: `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? '.' : ''}${propertyName}`,
+        currentKeyToPushTo: `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? seperator : ''}${propertyName}`,
         valueToPush: value.at(0) === '"' && value.at(-1) === '"'
           ? value.slice(1, -1)
           : value

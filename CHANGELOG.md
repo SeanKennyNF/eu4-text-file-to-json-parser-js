@@ -52,3 +52,7 @@ add_permanent_province_modifier = {
 ## Version 0.1.6 - September 1st 2024
 
 - Fixed a bug which would cause nested value array properties to parse incorrectly if there were more than two elements.
+
+## Version 0.1.7 - September 1st 2024
+
+- Fixed a bug which would throw errors when a property name contained a `.` character.
