@@ -59,6 +59,21 @@ export const writeValueToOutputJSONData = (
       }
     }
 
+    if(
+      valueOrNestedValueIsNestedValue(valueToPush)
+      && Object.keys(valueToPush).length === 0
+      && currentArrayValueForKey !== undefined
+      && valueOrNestedValueIsNestedValueArray(currentArrayValueForKey)
+    ) {
+      return {
+        ...input.outputJSONData,
+        [key]: [
+          ...currentArrayValueForKey,
+          valueToPush
+        ]
+      }
+    }
+
     if( currentArrayValueForKey === undefined || (
       valueOrNestedValueIsNestedValue(currentArrayValueForKey)
       && Object.keys(currentArrayValueForKey).length === 0
@@ -100,7 +115,7 @@ export const writeValueToOutputJSONData = (
     return {
       ...input.outputJSONData,
       [lowestValueKey]: [
-        ...valueForLowestValueKey.slice(0, 1),
+        ...valueForLowestValueKey.slice(0, -1),
         writeValueToOutputJSONData({
           outputJSONData: valueForLowestValueKey.at(-1) ?? {},
           currentKeyToPushTo: otherKeys.join('.'),
