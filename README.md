@@ -133,6 +133,7 @@ tree = { 3 4 7 10 }
   "tree": ["3", "4", "7", "10"]
 }
 ```
+
 ```
 add_core = I43
 culture = green_orc
@@ -143,6 +144,28 @@ add_core = I34
 {
   "add_core": ["I43", "I34"],
   "culture": "green_orc"
+}
+```
+
+```
+is_city = yes
+add_permanent_province_modifier = {
+	name = harimari_minority_coexisting_small
+	duration = -1
+}
+add_permanent_province_modifier = {
+	name = temple_complex
+	duration = -1
+}
+```
+
+```
+{
+  "is_city": "yes",
+  "add_permanent_province_modifier": [
+    { "name": "harimari_minority_coexisting_small", "duration": "-1" },
+    { "name": "temple_complex", "duration": "-1" }
+  ]
 }
 ```
 
