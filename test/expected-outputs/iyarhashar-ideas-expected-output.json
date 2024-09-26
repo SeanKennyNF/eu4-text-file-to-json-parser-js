@@ -1,0 +1,18 @@
+{
+  "R04_ideas": {
+    "start": { "land_morale": "0.1", "state_maintenance_modifier": "-0.25" },
+    "bonus": { "build_cost": "-0.1" },
+    "trigger": { "tag": "R04" },
+    "free": "yes",
+    "R04_jungle_terror": { "hostile_attrition": "1" },
+    "Ragkingdoms_ferocious_independence": { "defensiveness": "0.2" },
+    "R04_metobesebi_integration": { "diplomatic_annexation_cost": "-0.2" },
+    "Ragkingdoms_naval_history": { "navy_tradition": "1" },
+    "R04_bavijay_naval_industries": {
+      "naval_forcelimit_modifier": "0.1",
+      "production_efficiency": "0.05"
+    },
+    "Ragkingdoms_turban_school_connection": { "global_trade_power": "0.1" },
+    "R04_last_bastion_of_raghamidesh": { "garrison_size": "0.25" }
+  }
+}
