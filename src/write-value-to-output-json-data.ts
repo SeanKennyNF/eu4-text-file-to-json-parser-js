@@ -126,7 +126,6 @@ export const writeValueToOutputJSONData = (
   }
 
   if(!valueOrNestedValueIsNestedValue(valueForLowestValueKey)) {
-    console.error(input)
     throw new Error(`Cannot mix JSON values with string and string array values on the same key. Key: ${input.currentKeyToPushTo}`);
   }
 
