@@ -74,3 +74,7 @@ add_permanent_province_modifier = {
 ## Version 0.1.11 - September 26th 2024
 
 - Fixed accidental publish. Contains actual changes for version 0.1.10
+
+## Version 0.1.12 - September 26th 2024
+
+- Added `'` as a valid character in property names.
