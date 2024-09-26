@@ -66,3 +66,7 @@ add_permanent_province_modifier = {
 ## Version 0.1.9 - September 26th 2024
 
 - Add support for properties in the form `ABC = { DEF = GHI }`.
+
+## Version 0.1.10 - September 26th 2024
+
+- Fixed a bug which prevented rows containing a `\t` from being parsed properly. The `\t` character is now treated the same as a ` ` character.

@@ -27,6 +27,7 @@ export const parseEu4TextFileToJson = async(
 
   for(const rawFileRow of rawFileRows) {
     const cleanedRow = rawFileRow
+      .replaceAll(/\t/g, ' ')
       .trim()
       .replaceAll(/#.*$/g, '')
       .trim();

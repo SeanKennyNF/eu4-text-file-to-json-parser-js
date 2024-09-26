@@ -56,6 +56,10 @@ const testCases = [{
   inputFilename: 'boek-ideas.txt',
   artifactFilename: 'boek-ideas-output.json',
   expectedOutputFilename: 'boek-ideas-expected-output.json'
+}, {
+  inputFilename: 'iyarhashar-ideas.txt',
+  artifactFilename: 'iyarhashar-ideas-output.json',
+  expectedOutputFilename: 'iyarhashar-ideas-expected-output.json'
 }];
 
 test.each(testCases)('parseEu4TextFileToJson should produce the right input for $inputFilename', async({
