@@ -70,3 +70,7 @@ add_permanent_province_modifier = {
 ## Version 0.1.10 - September 26th 2024
 
 - Fixed a bug which prevented rows containing a `\t` from being parsed properly. The `\t` character is now treated the same as a ` ` character.
+
+## Version 0.1.11 - September 26th 2024
+
+- Fixed accidental publish. Contains actual changes for version 0.1.10
