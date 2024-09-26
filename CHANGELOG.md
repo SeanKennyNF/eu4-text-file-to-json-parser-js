@@ -56,3 +56,9 @@ add_permanent_province_modifier = {
 ## Version 0.1.7 - September 1st 2024
 
 - Fixed a bug which would throw errors when a property name contained a `.` character.
+
+## Version 0.1.8 - September 26th 2024
+
+- Fixed a bug which would throw errors when a property name contained a `-` character.
+- Fixed a bug which would cause properties to sometimes parse to `"fieldOne.fieldTwo": "ABC"` instead of `"fieldOne": { "fieldTwo": "ABC" }`.
+- Some small, non-breaking dev dependency version bumps.
