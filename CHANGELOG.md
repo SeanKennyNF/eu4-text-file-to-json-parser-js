@@ -62,3 +62,7 @@ add_permanent_province_modifier = {
 - Fixed a bug which would throw errors when a property name contained a `-` character.
 - Fixed a bug which would cause properties to sometimes parse to `"fieldOne.fieldTwo": "ABC"` instead of `"fieldOne": { "fieldTwo": "ABC" }`.
 - Some small, non-breaking dev dependency version bumps.
+
+## Version 0.1.9 - September 26th 2024
+
+- Add support for properties in the form `ABC = { DEF = GHI }`.
