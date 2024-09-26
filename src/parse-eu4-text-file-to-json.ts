@@ -33,22 +33,72 @@ export const parseEu4TextFileToJson = async(
 
     if(!cleanedRow) {
       //Do nothing, this is either an empty line or was a comment before our cleaning.
-    } else if(/^([a-zA-Z0-9_\.-])+(\ )*=(\ )*{([a-zA-Z0-9_\ /".\-'])*}$/.test(cleanedRow)) {
+    } else if(/^([a-zA-Z0-9_\.-])+(\ )*=(\ )*{([a-zA-Z0-9_\ /".\-='])*}$/.test(cleanedRow)) {
       // This is in the format "property_name = { ... }"
       const splitCleanedRow = cleanedRow.split('=').map((element) => element.trim());
-      const propertyName = splitCleanedRow[0];
-      const elements = splitCleanedRow[1]
-        .slice(1, -1)
-        .split("\"")
-        .flatMap((element, index) => index % 2 === 0 ? element.split(" ") : [ element ])
-        .map((element) => element.trim())
-        .filter((element) => element !== '');
+      const propertyName = splitCleanedRow[0].trim();
+      const propertyValue = splitCleanedRow.slice(1).join('=').trim();
 
-      outputJSONData = writeValueToOutputJSONData({
-        outputJSONData,
-        currentKeyToPushTo: `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? seperator : ''}${propertyName}`,
-        valueToPush: elements
-      })
+      if(/^({)?(\ )*([a-zA-Z0-9_\.-])+(\ )*=(\ )*(.)*$/.test(propertyValue)) {
+        // This is in the format "property_name = { inner_property_name = 123456 }" OR
+        // This is in the format "property_name = { inner_property_name = { inner_inner_property_name = 1000 }}"
+        // In that second example, we need to have some kind of loop here to keep digging deeper into the since inner_inner_property_name could
+        // also have a json object as a key.
+
+        currentKeyToPushTo = `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? seperator : ''}${propertyName}`;
+
+        let currentKeyValuePairToEvaluate = propertyValue;
+        let currentKeyToEvaluate = currentKeyValuePairToEvaluate
+          .split('=')[0]
+          .trim()
+          .replace(/^{/, '')
+          .trim();
+        let currentValueToEvaluate = currentKeyValuePairToEvaluate
+          .split('=')
+          .slice(1)
+          .join('=')
+          .trim()
+          .replace(/}$/, '')
+          .trim();
+
+        while(/^{(.)*}$/.test(currentValueToEvaluate)) {
+          currentKeyToPushTo = `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? seperator : ''}${currentKeyToEvaluate}`;
+
+          currentKeyValuePairToEvaluate = currentValueToEvaluate;
+          currentKeyToEvaluate = currentKeyValuePairToEvaluate
+            .split('=')[0]
+            .trim()
+            .replace(/^{/, '')
+            .trim();
+          currentValueToEvaluate = currentKeyValuePairToEvaluate
+            .split('=')
+            .slice(1)
+            .join('=')
+            .trim()
+            .replace(/}$/, '')
+            .trim();
+        }
+
+        outputJSONData = writeValueToOutputJSONData({
+          outputJSONData,
+          currentKeyToPushTo: `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? seperator : ''}${currentKeyToEvaluate}`,
+          valueToPush: currentValueToEvaluate
+        });
+      } else {
+        // This is in the format "property_name = { 1 2 3 4 }"
+        const elements = propertyValue
+          .slice(1, -1)
+          .split("\"")
+          .flatMap((element, index) => index % 2 === 0 ? element.split(" ") : [ element ])
+          .map((element) => element.trim())
+          .filter((element) => element !== '');
+
+        outputJSONData = writeValueToOutputJSONData({
+          outputJSONData,
+          currentKeyToPushTo: `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? seperator : ''}${propertyName}`,
+          valueToPush: elements
+        });
+      }
     } else if(/^([a-zA-Z0-9_\.-])+(\ )*=(\ )*{$/.test(cleanedRow)) {
       // This is in the format "property_name = {"
       const splitCleanedRow = cleanedRow.split('=').map((element) => element.trim());
