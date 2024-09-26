@@ -118,7 +118,7 @@ export const writeValueToOutputJSONData = (
         ...valueForLowestValueKey.slice(0, -1),
         writeValueToOutputJSONData({
           outputJSONData: valueForLowestValueKey.at(-1) ?? {},
-          currentKeyToPushTo: otherKeys.join('.'),
+          currentKeyToPushTo: otherKeys.join(seperator),
           valueToPush
         })
       ]
@@ -133,7 +133,7 @@ export const writeValueToOutputJSONData = (
     ...input.outputJSONData,
     [lowestValueKey]: writeValueToOutputJSONData({
       outputJSONData: valueForLowestValueKey,
-      currentKeyToPushTo: otherKeys.join('.'),
+      currentKeyToPushTo: otherKeys.join(seperator),
       valueToPush
     })
   }
