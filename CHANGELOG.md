@@ -78,3 +78,7 @@ add_permanent_province_modifier = {
 ## Version 0.1.12 - September 26th 2024
 
 - Added `'` as a valid character in property names.
+
+## Version 0.1.13 - September 27th 2024
+
+- Fixed a bug which would result in properties following a `ABC = { DEF = GHI }` property to be nested one level deeper than they should have been.
