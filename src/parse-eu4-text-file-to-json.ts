@@ -48,6 +48,7 @@ export const parseEu4TextFileToJson = async(
 
         currentKeyToPushTo = `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? seperator : ''}${propertyName}`;
 
+        let levelsNestedThatNeedToBeUnNested = 1;
         let currentKeyValuePairToEvaluate = propertyValue;
         let currentKeyToEvaluate = currentKeyValuePairToEvaluate
           .split('=')[0]
@@ -64,6 +65,7 @@ export const parseEu4TextFileToJson = async(
 
         while(/^{(.)*}$/.test(currentValueToEvaluate)) {
           currentKeyToPushTo = `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? seperator : ''}${currentKeyToEvaluate}`;
+          levelsNestedThatNeedToBeUnNested += 1;
 
           currentKeyValuePairToEvaluate = currentValueToEvaluate;
           currentKeyToEvaluate = currentKeyValuePairToEvaluate
@@ -85,6 +87,15 @@ export const parseEu4TextFileToJson = async(
           currentKeyToPushTo: `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? seperator : ''}${currentKeyToEvaluate}`,
           valueToPush: currentValueToEvaluate
         });
+
+        while(levelsNestedThatNeedToBeUnNested > 0) {
+          currentKeyToPushTo = currentKeyToPushTo
+            .split(seperator)
+            .slice(0, -1)
+            .join(seperator);
+            
+          levelsNestedThatNeedToBeUnNested -= 1;
+        }
       } else {
         // This is in the format "property_name = { 1 2 3 4 }"
         const elements = propertyValue
