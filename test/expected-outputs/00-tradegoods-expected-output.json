@@ -1,0 +1,3280 @@
+{
+    "grain": {
+        "color": [
+            "0.96",
+            "0.93",
+            "0.58"
+        ],
+        "modifier": {
+            "land_forcelimit_modifier": "0.20"
+        },
+        "province": {
+            "land_forcelimit": "0.5"
+        },
+        "chance": {
+            "factor": "35",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "OR": {
+                        "has_terrain": [
+                            "desert",
+                            "glacier",
+                            "coastline",
+                            "cavern",
+                            "dwarven_hold",
+                            "dwarven_hold_surface",
+                            "dwarven_road",
+                            "city_terrain",
+                            "mushroom_forest_terrain"
+                        ],
+                        "has_climate": "arctic",
+                        "region": "yezel_mora_region"
+                    }
+                },
+                {
+                    "factor": "0.15",
+                    "OR": {
+                        "has_terrain": [
+                            "mountain",
+                            "coastal_desert",
+                            "forest",
+                            "woods",
+                            "hills",
+                            "jungle",
+                            "ancient_forest",
+                            "gladeway",
+                            "bloodgroves"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0.25",
+                    "OR": {
+                        "has_terrain": [
+                            "highlands",
+                            "marsh"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0.25",
+                    "OR": {
+                        "has_climate": [
+                            "arid",
+                            "tropical"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0.6",
+                    "OR": {
+                        "has_terrain": [
+                            "drylands",
+                            "savannah",
+                            "steppe"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0.35",
+                    "has_winter": "severe_winter"
+                },
+                {
+                    "factor": "0.5",
+                    "has_winter": "normal_winter"
+                },
+                {
+                    "factor": "1.5",
+                    "has_terrain": "farmlands"
+                },
+                {
+                    "factor": "2",
+                    "has_terrain": "grasslands",
+                    "OR": {
+                        "region": [
+                            "endralliande_region",
+                            "ravenous_isle_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.2",
+                    "has_terrain": "grasslands",
+                    "OR": {
+                        "region": [
+                            "trollsbay_region",
+                            "dry_coast_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "has_terrain": "marsh",
+                    "region": "leechdens_region"
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "province_id": [
+                            "4236",
+                            "2978",
+                            "2914"
+                        ],
+                        "region": "moduk_region",
+                        "area": "somyonghon_area",
+                        "continent": "africa"
+                    }
+                },
+                {
+                    "factor": "2",
+                    "owner": {
+                        "has_country_flag": "estate_nobles_G57_land_golden_ears_flag"
+                    }
+                }
+            ]
+        }
+    },
+    "wine": {
+        "color": [
+            "0.36",
+            "0.13",
+            "0.28"
+        ],
+        "modifier": {
+            "global_unrest": "-1"
+        },
+        "province": {
+            "local_unrest": "-1"
+        },
+        "chance": {
+            "factor": "5",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "OR": {
+                        "has_winter": "severe_winter",
+                        "has_climate": [
+                            "arctic",
+                            "arid",
+                            "tropical"
+                        ],
+                        "has_terrain": [
+                            "jungle",
+                            "drylands",
+                            "steppe",
+                            "desert",
+                            "coastal_desert",
+                            "marsh",
+                            "savannah",
+                            "glacier",
+                            "mushroom_forest_terrain"
+                        ],
+                        "continent": "africa"
+                    }
+                },
+                {
+                    "factor": "0.25",
+                    "has_winter": "normal_winter"
+                },
+                {
+                    "factor": "1.25",
+                    "has_terrain": "farmlands"
+                },
+                {
+                    "factor": "1.25",
+                    "OR": {
+                        "has_terrain": [
+                            "hills",
+                            "highlands"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "region": "severed_coast_region"
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "province_id": [
+                            "4236",
+                            "2978",
+                            "2914"
+                        ]
+                    }
+                },
+                {
+                    "factor": "3",
+                    "region": "domandrod_region"
+                },
+                {
+                    "factor": "1.1",
+                    "FROM": {
+                        "culture_group": "lencori"
+                    }
+                },
+                {
+                    "factor": "8",
+                    "region": "bloodgroves_region"
+                },
+                {
+                    "factor": "0.75",
+                    "has_terrain": "bloodgroves"
+                }
+            ]
+        }
+    },
+    "wool": {
+        "color": [
+            "0.83",
+            "0.83",
+            "0.83"
+        ],
+        "modifier": {
+            "global_ship_cost": "-0.05"
+        },
+        "province": {
+            "local_friendly_movement_speed": "0.10"
+        },
+        "chance": {
+            "factor": "30",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "OR": {
+                        "has_terrain": [
+                            "glacier",
+                            "marsh",
+                            "jungle",
+                            "farmlands",
+                            "coastline",
+                            "hills",
+                            "forest",
+                            "woods",
+                            "dwarven_hold",
+                            "dwarven_hold_surface",
+                            "city_terrain"
+                        ],
+                        "region": "yezel_mora_region"
+                    }
+                },
+                {
+                    "factor": "0.15",
+                    "OR": {
+                        "has_terrain": [
+                            "grasslands",
+                            "hills",
+                            "forest",
+                            "woods",
+                            "ancient_forest",
+                            "gladeway",
+                            "bloodgroves"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0.4",
+                    "OR": {
+                        "has_terrain": [
+                            "dwarven_road",
+                            "cavern"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.25",
+                    "OR": {
+                        "has_terrain": [
+                            "desert",
+                            "savannah",
+                            "highlands",
+                            "drylands"
+                        ],
+                        "has_climate": "arid"
+                    }
+                },
+                {
+                    "factor": "3",
+                    "has_terrain": "grasslands",
+                    "OR": {
+                        "region": [
+                            "endralliande_region",
+                            "ravenous_isle_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "province_id": [
+                            "4236",
+                            "2978",
+                            "2914"
+                        ],
+                        "region": "mushroom_forest_region",
+                        "area": [
+                            "westnest_area",
+                            "eastnest_area"
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "cloth": {
+        "color": [
+            "0.86",
+            "0.19",
+            "0.19"
+        ],
+        "modifier": {
+            "merc_maintenance_modifier": "-0.15"
+        },
+        "province": {
+            "local_development_cost": "-0.1"
+        },
+        "chance": {
+            "factor": "10",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "OR": {
+                        "has_terrain": [
+                            "cavern",
+                            "dwarven_road",
+                            "mushroom_forest_terrain"
+                        ],
+                        "AND": {
+                            "NOT": {
+                                "development": "18",
+                                "has_terrain": [
+                                    "city_terrain",
+                                    "dwarven_hold",
+                                    "dwarven_hold_surface"
+                                ]
+                            }
+                        }
+                    }
+                },
+                {
+                    "factor": "2.0",
+                    "development": "22"
+                },
+                {
+                    "factor": "2",
+                    "has_terrain": "city_terrain"
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "province_id": [
+                            "4236",
+                            "2978",
+                            "2914"
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "fish": {
+        "color": [
+            "0.55",
+            "0.82",
+            "0.97"
+        ],
+        "modifier": {
+            "global_sailors_modifier": "0.25"
+        },
+        "province": {
+            "local_sailors_modifier": "0.25"
+        },
+        "chance": {
+            "factor": "20",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "NOT": {
+                        "has_port": "yes",
+                        "province_id": "2978"
+                    }
+                },
+                {
+                    "factor": "1.1",
+                    "OR": {
+                        "has_terrain": [
+                            "coastline",
+                            "coastal_desert"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.2",
+                    "has_terrain": "glacier"
+                },
+                {
+                    "factor": "1.5",
+                    "is_island": "yes"
+                },
+                {
+                    "factor": "1.5",
+                    "OR": {
+                        "region": [
+                            "ruined_isles_region",
+                            "north_ruined_isles_region",
+                            "tor_nayyi_region",
+                            "severed_coast_region",
+                            "dry_coast_region"
+                        ],
+                        "area": [
+                            "lastsight_islands_area",
+                            "molbrotio_area",
+                            "nyhofn_area",
+                            "scattered_islands_area",
+                            "torn_isles_area",
+                            "rezailan_area"
+                        ]
+                    }
+                },
+                {
+                    "factor": "2",
+                    "has_terrain": "marsh",
+                    "region": "leechdens_region"
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "province_id": [
+                            "4236",
+                            "2914"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0.4",
+                    "continent": "africa"
+                },
+                {
+                    "factor": "1000",
+                    "province_id": "2978"
+                }
+            ]
+        }
+    },
+    "fur": {
+        "color": [
+            "0.54",
+            "0.40",
+            "0.31"
+        ],
+        "modifier": {
+            "prestige": "0.5"
+        },
+        "province": {
+            "province_trade_power_modifier": "0.10"
+        },
+        "chance": {
+            "factor": "15",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "OR": {
+                        "has_climate": [
+                            "tropical",
+                            "arid"
+                        ],
+                        "has_terrain": [
+                            "drylands",
+                            "steppe",
+                            "desert",
+                            "coastal_desert",
+                            "coastline"
+                        ]
+                    },
+                    "NOT": {
+                        "has_winter": [
+                            "normal_winter",
+                            "severe_winter"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "has_terrain": [
+                            "farmlands",
+                            "mountain",
+                            "dwarven_hold",
+                            "dwarven_hold_surface",
+                            "dwarven_road",
+                            "cavern"
+                        ],
+                        "continent": [
+                            "south_america",
+                            "africa"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0.75",
+                    "OR": {
+                        "has_terrain": [
+                            "savannah",
+                            "grasslands",
+                            "highlands"
+                        ]
+                    },
+                    "has_winter": "mild_winter"
+                },
+                {
+                    "factor": "0.5",
+                    "OR": {
+                        "NOT": {
+                            "native_size": "1"
+                        },
+                        "has_terrain": "city_terrain"
+                    }
+                },
+                {
+                    "factor": "2.0",
+                    "native_size": "1"
+                },
+                {
+                    "factor": "1.5",
+                    "OR": {
+                        "has_terrain": [
+                            "forest",
+                            "ancient_forest",
+                            "gladeway"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.6",
+                    "has_winter": "normal_winter"
+                },
+                {
+                    "factor": "2.5",
+                    "has_winter": "severe_winter",
+                    "NOT": {
+                        "has_terrain": "glacier"
+                    }
+                },
+                {
+                    "factor": "1.1",
+                    "superregion": "gerudia_superregion"
+                },
+                {
+                    "factor": "0.25",
+                    "superregion": "escann_superregion"
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "province_id": [
+                            "4236",
+                            "2978",
+                            "2914"
+                        ]
+                    }
+                },
+                {
+                    "factor": "2.0",
+                    "FROM": {
+                        "has_country_flag": "encourage_cash_crops_flag"
+                    }
+                },
+                {
+                    "factor": "0.75",
+                    "region": "bloodgroves_region"
+                }
+            ]
+        }
+    },
+    "salt": {
+        "color": [
+            "0.999",
+            "0.999",
+            "0.999"
+        ],
+        "modifier": {
+            "land_maintenance_modifier": "-0.05"
+        },
+        "province": {
+            "local_defensiveness": "0.15"
+        },
+        "chance": {
+            "factor": "5",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "NOT": {
+                        "has_terrain": [
+                            "desert",
+                            "marsh",
+                            "mountain",
+                            "highlands",
+                            "cavern",
+                            "dwarven_hold",
+                            "dwarven_road"
+                        ],
+                        "region": "dao_nako_region"
+                    }
+                },
+                {
+                    "factor": "2",
+                    "OR": {
+                        "has_terrain": "desert",
+                        "AND": {
+                            "has_terrain": "marsh",
+                            "NOT": {
+                                "has_climate": "arctic"
+                            }
+                        }
+                    }
+                },
+                {
+                    "factor": "5",
+                    "region": "dao_nako_region"
+                },
+                {
+                    "factor": "0.5",
+                    "superregion": "gerudia_superregion"
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "province_id": [
+                            "4236",
+                            "2978",
+                            "2914"
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "naval_supplies": {
+        "color": [
+            "0.11",
+            "0.17",
+            "0.4"
+        ],
+        "modifier": {
+            "naval_forcelimit_modifier": "0.20"
+        },
+        "province": {
+            "naval_forcelimit": "0.5"
+        },
+        "chance": {
+            "factor": "15",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "OR": {
+                        "has_terrain": [
+                            "glacier",
+                            "desert",
+                            "coastal_desert",
+                            "drylands",
+                            "savannah",
+                            "marsh",
+                            "steppe",
+                            "highlands",
+                            "farmlands",
+                            "cavern",
+                            "dwarven_hold",
+                            "dwarven_hold_surface",
+                            "dwarven_road"
+                        ],
+                        "superregion": "northern_expanse_superregion",
+                        "region": [
+                            "yezel_mora_region",
+                            "dao_nako_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0.5",
+                    "OR": {
+                        "has_terrain": [
+                            "mountain",
+                            "grasslands"
+                        ],
+                        "has_climate": "arctic"
+                    }
+                },
+                {
+                    "factor": "0.5",
+                    "FROM": {
+                        "NOT": {
+                            "num_of_ports": "1"
+                        }
+                    }
+                },
+                {
+                    "factor": "0.75",
+                    "OR": {
+                        "has_terrain": "coastline",
+                        "has_climate": "tropical"
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "OR": {
+                        "region": "moduk_region",
+                        "area": "somyonghon_area"
+                    },
+                    "NOT": {
+                        "has_terrain": "steppe"
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "OR": {
+                        "has_terrain": [
+                            "forest",
+                            "woods",
+                            "hills",
+                            "jungle",
+                            "ancient_forest",
+                            "gladeway",
+                            "bloodgroves"
+                        ],
+                        "region": "dalaire_region"
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "province_id": [
+                            "4236",
+                            "2978",
+                            "2914"
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "copper": {
+        "color": [
+            "0.85",
+            "0.46",
+            "0.15"
+        ],
+        "modifier": {
+            "global_regiment_recruit_speed": "-0.2"
+        },
+        "province": {
+            "regiment_recruit_speed": "-0.2"
+        },
+        "chance": {
+            "factor": "15",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "OR": {
+                        "has_terrain": [
+                            "steppe",
+                            "desert",
+                            "coastal_desert",
+                            "drylands",
+                            "grasslands",
+                            "savannah",
+                            "coastline",
+                            "glacier",
+                            "jungle",
+                            "farmlands",
+                            "woods",
+                            "mushroom_forest_terrain"
+                        ],
+                        "region": [
+                            "yezel_mora_region",
+                            "domandrod_region",
+                            "dao_nako_region"
+                        ],
+                        "province_id": [
+                            "4236",
+                            "2978",
+                            "2914"
+                        ],
+                        "AND": {
+                            "continent": "africa",
+                            "province_is_on_an_island": "yes"
+                        }
+                    },
+                    "NOT": {
+                        "OR": {
+                            "province_id": [
+                                "2319",
+                                "2320"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "factor": "0",
+                    "is_random_new_world": "yes",
+                    "NOT": {
+                        "continent": "new_world"
+                    }
+                },
+                {
+                    "factor": "1.1",
+                    "is_random_new_world": "yes",
+                    "OR": {
+                        "has_terrain": [
+                            "mountain",
+                            "highlands",
+                            "cavern"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.1",
+                    "superregion": "gerudia_superregion"
+                },
+                {
+                    "factor": "1000",
+                    "province_id": "526"
+                },
+                {
+                    "factor": "2",
+                    "OR": {
+                        "region": [
+                            "endralliande_region",
+                            "ravenous_isle_region",
+                            "amadia_region"
+                        ],
+                        "superregion": "ynn_superregion"
+                    }
+                },
+                {
+                    "factor": "2",
+                    "FROM": {
+                        "has_country_flag": "kherkan_prospectors"
+                    }
+                },
+                {
+                    "factor": "2.25",
+                    "OR": {
+                        "area": [
+                            "gor_burad_area",
+                            "buradforge_area"
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "gold": {
+        "color": [
+            "1.0",
+            "0.84",
+            "0.19"
+        ],
+        "chance": {
+            "factor": "5",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "is_random_new_world": "yes",
+                    "NOT": {
+                        "continent": "new_world"
+                    }
+                },
+                {
+                    "factor": "0",
+                    "continent": "europe",
+                    "OR": {
+                        "has_terrain": [
+                            "forest",
+                            "woods",
+                            "drylands",
+                            "grasslands",
+                            "savannah",
+                            "steppe",
+                            "jungle",
+                            "coastline",
+                            "coastal_desert",
+                            "marsh",
+                            "city_terrain",
+                            "mushroom_forest_terrain"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "region": "yezel_mora_region",
+                        "AND": {
+                            "continent": "africa",
+                            "province_is_on_an_island": "yes"
+                        }
+                    }
+                },
+                {
+                    "factor": "0.3",
+                    "OR": {
+                        "has_terrain": [
+                            "dwarven_hold",
+                            "dwarven_hold_surface"
+                        ],
+                        "superregion": "forbidden_lands_superregion"
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "has_terrain": "mountain",
+                    "OR": {
+                        "continent": [
+                            "north_america",
+                            "south_america"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.1",
+                    "OR": {
+                        "superregion": "gerudia_superregion",
+                        "region": "amadia_region"
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "normal_or_historical_nations": "no"
+                },
+                {
+                    "factor": "10",
+                    "has_terrain": "mountain",
+                    "OR": {
+                        "region": [
+                            "amadia_region",
+                            "dalaire_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "5",
+                    "has_terrain": "hills",
+                    "OR": {
+                        "region": [
+                            "amadia_region",
+                            "dalaire_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "3",
+                    "has_terrain": "highlands",
+                    "region": "amadia_region"
+                },
+                {
+                    "factor": "1.5",
+                    "OR": {
+                        "area": [
+                            "silvegor_area",
+                            "borawid_area",
+                            "chaka_nelir_area",
+                            "oomu_nelir_area",
+                            "paiss_siqum_area",
+                            "chaiwafmul_area"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0.6",
+                    "superregion": "escann_superregion"
+                },
+                {
+                    "factor": "0",
+                    "continent": "serpentspine",
+                    "FROM": {
+                        "NOT": {
+                            "num_of_cities": "2"
+                        },
+                        "ai": "yes"
+                    }
+                },
+                {
+                    "factor": "1000",
+                    "OR": {
+                        "province_id": [
+                            "2262",
+                            "2914"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "province_id": [
+                            "4236",
+                            "2978"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.1",
+                    "region": "domandrod_region"
+                },
+                {
+                    "factor": "0",
+                    "FROM": {
+                        "has_reform": "roadwarrior_great_convoy"
+                    }
+                },
+                {
+                    "factor": "2",
+                    "FROM": {
+                        "has_reform": "dwarovar_treasures_of_our_forefathers"
+                    }
+                },
+                {
+                    "factor": "2.5",
+                    "OR": {
+                        "area": [
+                            "gor_burad_area",
+                            "buradforge_area"
+                        ]
+                    }
+                },
+                {
+                    "factor": "7.5",
+                    "area": "greatcavern_area"
+                },
+                {
+                    "factor": "0",
+                    "province_group": "effelai_hub_provinces_group"
+                }
+            ]
+        }
+    },
+    "iron": {
+        "color": [
+            "0.2",
+            "0.2",
+            "0.2"
+        ],
+        "modifier": {
+            "global_regiment_cost": "-0.05"
+        },
+        "province": {
+            "local_build_time": "-0.2"
+        },
+        "chance": {
+            "factor": "10",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "OR": {
+                        "region": "yezel_mora_region",
+                        "province_id": [
+                            "4236",
+                            "2978",
+                            "2914"
+                        ],
+                        "AND": {
+                            "continent": "africa",
+                            "province_is_on_an_island": "yes"
+                        }
+                    }
+                },
+                {
+                    "factor": "1.2",
+                    "normal_or_historical_nations": "no",
+                    "OR": {
+                        "has_terrain": [
+                            "mountain",
+                            "hills",
+                            "highlands",
+                            "cavern",
+                            "dwarven_hold",
+                            "dwarven_hold_surface",
+                            "dwarven_road"
+                        ]
+                    }
+                },
+                {
+                    "factor": "2",
+                    "FROM": {
+                        "has_country_flag": "kherkan_prospectors"
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "is_random_new_world": "yes",
+                    "has_terrain": "mountain",
+                    "continent": "new_world"
+                },
+                {
+                    "factor": "2",
+                    "OR": {
+                        "region": [
+                            "endralliande_region",
+                            "ravenous_isle_region",
+                            "dalaire_region",
+                            "amadia_region",
+                            "leechdens_region",
+                            "dry_coast_region",
+                            "dao_nako_region"
+                        ],
+                        "superregion": "ynn_superregion"
+                    }
+                },
+                {
+                    "factor": "1000",
+                    "province_id": "6254"
+                },
+                {
+                    "factor": "3",
+                    "OR": {
+                        "area": [
+                            "gor_burad_area",
+                            "buradforge_area"
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "slaves": {
+        "color": [
+            "0.0",
+            "0.0",
+            "0.0"
+        ],
+        "modifier": {
+            "global_own_trade_power": "0.1"
+        },
+        "province": {
+            "local_missionary_strength": "0.01"
+        },
+        "chance": {
+            "factor": "7",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "FROM": {
+                        "has_country_modifier": "the_abolish_slavery_act"
+                    }
+                },
+                {
+                    "factor": "0",
+                    "FROM": {
+                        "NOT": {
+                            "has_country_modifier": "gnollish_administration",
+                            "has_country_flag": "orldhum_slaves"
+                        }
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "AND": [
+                            {
+                                "NOT": {
+                                    "is_city": "yes",
+                                    "is_colony": "yes"
+                                }
+                            },
+                            {
+                                "FROM": {
+                                    "NOT": {
+                                        "has_country_flag": "orldhum_slaves"
+                                    }
+                                },
+                                "OR": {
+                                    "has_terrain": [
+                                        "dwarven_hold",
+                                        "dwarven_hold_surface"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "province_id": [
+                            "4236",
+                            "2978",
+                            "2914"
+                        ],
+                        "region": "serpents_vale_region"
+                    }
+                },
+                {
+                    "factor": "2.0",
+                    "FROM": {
+                        "has_country_flag": "encourage_cash_crops_flag"
+                    }
+                },
+                {
+                    "factor": "2.0",
+                    "FROM": {
+                        "has_country_flag": "orldhum_slaves"
+                    },
+                    "OR": {
+                        "has_terrain": "dwarven_road",
+                        "province_group": "hold_province"
+                    }
+                },
+                {
+                    "factor": "5.0",
+                    "FROM": {
+                        "has_country_flag": "orldhum_slaves"
+                    },
+                    "has_terrain": "cavern"
+                }
+            ]
+        }
+    },
+    "ivory": {
+        "color": [
+            "0.75",
+            "0.7",
+            "0.63"
+        ],
+        "modifier": {
+            "diplomatic_reputation": "2"
+        },
+        "province": {
+            "local_state_maintenance_modifier": "-0.2"
+        },
+        "chance": {
+            "factor": "15",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "NOT": {
+                        "continent": [
+                            "asia",
+                            "africa"
+                        ],
+                        "superregion": "gerudia_superregion",
+                        "region": [
+                            "northern_pass_region",
+                            "broken_isles_region",
+                            "dalaire_region",
+                            "veykoda_region",
+                            "domandrod_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "NOT": {
+                        "has_terrain": [
+                            "jungle",
+                            "savannah",
+                            "glacier",
+                            "forest",
+                            "grasslands",
+                            "ancient_forest",
+                            "gladeway"
+                        ],
+                        "region": [
+                            "yezel_mora_region",
+                            "dao_nako_region"
+                        ],
+                        "AND": {
+                            "has_terrain": "farmlands region=veykoda_region"
+                        }
+                    }
+                },
+                {
+                    "factor": "0",
+                    "continent": "africa",
+                    "province_is_on_an_island": "yes"
+                },
+                {
+                    "factor": "1.25",
+                    "OR": {
+                        "has_terrain": [
+                            "jungle",
+                            "savannah"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.9",
+                    "region": "veykoda_region"
+                },
+                {
+                    "factor": "1.25",
+                    "OR": {
+                        "has_terrain": [
+                            "forest",
+                            "grasslands"
+                        ]
+                    },
+                    "has_winter": "severe_winter"
+                },
+                {
+                    "factor": "2",
+                    "OR": {
+                        "has_terrain": "glacier",
+                        "has_climate": "arctic"
+                    }
+                },
+                {
+                    "factor": "0.8",
+                    "OR": {
+                        "has_terrain": [
+                            "ancient_forest",
+                            "gladeway"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "region": "moduk_region",
+                    "NOT": {
+                        "province_id": [
+                            "4988",
+                            "4989",
+                            "4990",
+                            "4992"
+                        ]
+                    }
+                },
+                {
+                    "factor": "2.0",
+                    "FROM": {
+                        "has_country_flag": "encourage_cash_crops_flag"
+                    }
+                }
+            ]
+        }
+    },
+    "tea": {
+        "color": [
+            "0.07",
+            "0.33",
+            "0.09"
+        ],
+        "modifier": {
+            "advisor_cost": "-0.10"
+        },
+        "province": {
+            "garrison_growth": "0.25"
+        },
+        "chance": {
+            "factor": "15",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "OR": {
+                        "has_terrain": [
+                            "mountain",
+                            "desert",
+                            "drylands",
+                            "steppe",
+                            "savannah"
+                        ],
+                        "has_climate": "arid",
+                        "has_winter": [
+                            "mild_winter",
+                            "normal_winter",
+                            "severe_winter"
+                        ]
+                    },
+                    "NOT": {
+                        "region": "mushroom_forest_region"
+                    }
+                },
+                {
+                    "factor": "0.5",
+                    "has_terrain": "jungle"
+                },
+                {
+                    "factor": "1.2",
+                    "has_terrain": "farmlands"
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "continent": [
+                            "serpentspine",
+                            "europe",
+                            "africa"
+                        ]
+                    }
+                },
+                {
+                    "factor": "2",
+                    "OR": {
+                        "region": "ruined_isles_region",
+                        "superregion": "taychend_superregion"
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "OR": {
+                        "region": [
+                            "trollsbay_region",
+                            "severed_coast_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "30",
+                    "region": "mushroom_forest_region"
+                },
+                {
+                    "factor": "0.25",
+                    "superregion": "ynn_superregion"
+                },
+                {
+                    "factor": "2.0",
+                    "FROM": {
+                        "has_country_flag": "encourage_cash_crops_flag"
+                    }
+                },
+                {
+                    "factor": "1.1",
+                    "FROM": {
+                        "OR": {
+                            "culture_group": [
+                                "elven",
+                                "yan"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "chinaware": {
+        "color": [
+            "0.18",
+            "0.57",
+            "0.8"
+        ],
+        "modifier": {
+            "legitimacy": "0.25",
+            "devotion": "0.25",
+            "horde_unity": "0.25",
+            "republican_tradition": "0.12",
+            "meritocracy": "0.1"
+        },
+        "province": {
+            "local_autonomy": "-0.1"
+        },
+        "chance": {
+            "factor": "0",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "NOT": {
+                        "development": "8"
+                    }
+                },
+                {
+                    "factor": "0",
+                    "continent": "europe"
+                }
+            ]
+        }
+    },
+    "spices": {
+        "color": [
+            "0.4",
+            "0.65",
+            "0.38"
+        ],
+        "modifier": {
+            "spy_offence": "0.25"
+        },
+        "province": {
+            "local_monthly_devastation": "-0.1"
+        },
+        "chance": {
+            "factor": "25",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "OR": {
+                        "has_terrain": [
+                            "mountain",
+                            "cavern",
+                            "dwarven_hold",
+                            "dwarven_hold_surface",
+                            "dwarven_road",
+                            "glacier"
+                        ],
+                        "has_climate": "arctic",
+                        "has_winter": "severe_winter"
+                    }
+                },
+                {
+                    "factor": "0.25",
+                    "has_winter": "normal_winter"
+                },
+                {
+                    "factor": "0.4",
+                    "region": "yezel_mora_region"
+                },
+                {
+                    "factor": "0.5",
+                    "OR": {
+                        "continent": [
+                            "north_america",
+                            "south_america"
+                        ]
+                    },
+                    "NOT": {
+                        "superregion": "taychend_superregion",
+                        "region": "domandrod_region"
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "continent": [
+                            "europe",
+                            "serpentspine"
+                        ],
+                        "superregion": [
+                            "forbidden_lands_superregion",
+                            "gozengun_superregion",
+                            "yanshen_superregion"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "OR": {
+                        "superregion": "taychend_superregion",
+                        "region": "ringlet_isles_region"
+                    }
+                },
+                {
+                    "factor": "1.2",
+                    "OR": {
+                        "region": [
+                            "reapers_coast_region",
+                            "dry_coast_region",
+                            "domandrod_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "superregion": "ynn_superregion",
+                    "NOT": {
+                        "region": "epednan_expanse_region"
+                    }
+                },
+                {
+                    "factor": "2.0",
+                    "FROM": {
+                        "has_country_flag": "encourage_cash_crops_flag"
+                    }
+                }
+            ]
+        }
+    },
+    "coffee": {
+        "color": [
+            "0.22",
+            "0.15",
+            "0.09"
+        ],
+        "modifier": {
+            "global_institution_spread": "0.05"
+        },
+        "province": {
+            "local_institution_spread": "0.1"
+        },
+        "chance": {
+            "factor": "15",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "NOT": {
+                        "province_id": [
+                            "1036",
+                            "1952"
+                        ]
+                    },
+                    "OR": {
+                        "continent": "europe",
+                        "superregion": "west_serpentspine_superregion",
+                        "AND": [
+                            {
+                                "FROM": {
+                                    "culture_is_ruinborn": "yes"
+                                },
+                                "NOT": {
+                                    "FROM": {
+                                        "has_institution": "new_world_i"
+                                    }
+                                }
+                            },
+                            {
+                                "OR": {
+                                    "continent": [
+                                        "north_america",
+                                        "south_america"
+                                    ]
+                                },
+                                "NOT": {
+                                    "is_city": "yes",
+                                    "is_colony": "yes"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "has_terrain": [
+                            "glacier",
+                            "forest",
+                            "cavern",
+                            "dwarven_road",
+                            "dwarven_hold",
+                            "dwarven_hold_surface",
+                            "city_terrain"
+                        ],
+                        "has_climate": "arctic",
+                        "has_winter": [
+                            "severe_winter",
+                            "normal_winter",
+                            "mild_winter"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "continent": "africa",
+                    "NOT": {
+                        "region": "yezel_mora_region",
+                        "superregion": "east_sarhal_superregion"
+                    }
+                },
+                {
+                    "factor": "0",
+                    "is_random_new_world": "yes",
+                    "continent": "new_world",
+                    "NOT": {
+                        "has_climate": "tropical"
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "continent": "south_america"
+                },
+                {
+                    "factor": "0.5",
+                    "OR": {
+                        "superregion": [
+                            "ynn_superregion",
+                            "taychend_superregion"
+                        ],
+                        "region": "amadia_region"
+                    }
+                },
+                {
+                    "factor": "3",
+                    "OR": {
+                        "region": [
+                            "ravenous_isle_region",
+                            "turtleback_isle_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.2",
+                    "OR": {
+                        "region": [
+                            "reapers_coast_region",
+                            "soruin_region",
+                            "east_effelai_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.25",
+                    "area": "domandrod_gladeway_2_area"
+                },
+                {
+                    "factor": "2.0",
+                    "FROM": {
+                        "has_country_flag": "encourage_cash_crops_flag"
+                    }
+                },
+                {
+                    "factor": "1.1",
+                    "FROM": {
+                        "culture_group": "bulwari"
+                    }
+                },
+                {
+                    "factor": "100",
+                    "province_id": "1036"
+                }
+            ]
+        }
+    },
+    "cotton": {
+        "color": [
+            "0.52",
+            "0.68",
+            "0.6"
+        ],
+        "modifier": {
+            "global_colonial_growth": "20"
+        },
+        "province": {
+            "local_development_cost": "-0.1"
+        },
+        "chance": {
+            "factor": "20",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "OR": {
+                        "continent": [
+                            "europe",
+                            "africa"
+                        ],
+                        "superregion": "west_serpentspine_superregion"
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "has_terrain": [
+                            "mountain",
+                            "highlands",
+                            "forest",
+                            "jungle",
+                            "cavern",
+                            "dwarven_hold",
+                            "dwarven_hold_surface",
+                            "dwarven_road",
+                            "glacier",
+                            "desert"
+                        ],
+                        "has_climate": [
+                            "arctic",
+                            "arid"
+                        ],
+                        "has_winter": [
+                            "severe_winter",
+                            "normal_winter",
+                            "mild_winter"
+                        ],
+                        "region": "yezel_mora_region"
+                    }
+                },
+                {
+                    "factor": "0",
+                    "has_terrain": "marsh",
+                    "region": "leechdens_region"
+                },
+                {
+                    "factor": "0.5",
+                    "is_island": "yes"
+                },
+                {
+                    "factor": "1.8",
+                    "OR": {
+                        "has_terrain": [
+                            "farmlands",
+                            "grasslands"
+                        ],
+                        "continent": "north_america"
+                    }
+                },
+                {
+                    "factor": "1.15",
+                    "OR": {
+                        "continent": [
+                            "south_america",
+                            "north_america"
+                        ]
+                    }
+                },
+                {
+                    "factor": "2.0",
+                    "FROM": {
+                        "has_country_flag": "encourage_cash_crops_flag"
+                    }
+                }
+            ]
+        }
+    },
+    "sugar": {
+        "color": [
+            "0.74",
+            "0.95",
+            "0.68"
+        ],
+        "modifier": {
+            "war_exhaustion_cost": "-0.2"
+        },
+        "province": {
+            "local_unrest": "-1"
+        },
+        "chance": {
+            "factor": "15",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "OR": {
+                        "continent": [
+                            "europe",
+                            "serpentspine"
+                        ],
+                        "region": [
+                            "northern_pass_region",
+                            "yezel_mora_region",
+                            "dao_nako_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "NOT": {
+                        "has_climate": "tropical"
+                    },
+                    "OR": {
+                        "has_winter": [
+                            "severe_winter",
+                            "normal_winter",
+                            "mild_winter"
+                        ],
+                        "has_terrain": [
+                            "desert",
+                            "mountain",
+                            "hills",
+                            "highlands",
+                            "forest",
+                            "steppe"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "OR": {
+                        "continent": [
+                            "north_america",
+                            "south_america"
+                        ],
+                        "region": "ringlet_isles_region"
+                    }
+                },
+                {
+                    "factor": "2",
+                    "OR": {
+                        "region": [
+                            "ravenous_isle_region",
+                            "reapers_coast_region",
+                            "haraf_region"
+                        ]
+                    },
+                    "FROM": {
+                        "NOT": {
+                            "has_reform": "G58_agronomers_association_reform"
+                        }
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "OR": {
+                        "region": [
+                            "trollsbay_region",
+                            "tor_nayyi_region",
+                            "turtleback_isle_region",
+                            "east_effelai_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0.5",
+                    "superregion": "ynn_superregion"
+                },
+                {
+                    "factor": "1.25",
+                    "area": "domandrod_gladeway_2_area"
+                },
+                {
+                    "factor": "2.0",
+                    "FROM": {
+                        "has_country_flag": "encourage_cash_crops_flag"
+                    }
+                },
+                {
+                    "factor": "4.0",
+                    "FROM": {
+                        "has_reform": "G58_agronomers_association_reform"
+                    }
+                }
+            ]
+        }
+    },
+    "tobacco": {
+        "color": [
+            "0.33",
+            "0.56",
+            "0.38"
+        ],
+        "modifier": {
+            "global_spy_defence": "0.25"
+        },
+        "province": {
+            "province_trade_power_modifier": "0.10"
+        },
+        "chance": {
+            "factor": "15",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "is_random_new_world": "yes",
+                    "NOT": {
+                        "continent": "new_world"
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "AND": {
+                            "has_climate": "arid",
+                            "NOT": {
+                                "has_terrain": [
+                                    "grasslands",
+                                    "farmlands"
+                                ]
+                            }
+                        },
+                        "has_winter": "severe_winter",
+                        "has_terrain": [
+                            "glacier",
+                            "mountain",
+                            "drylands",
+                            "desert",
+                            "cavern",
+                            "dwarven_hold",
+                            "dwarven_hold_surface",
+                            "dwarven_road",
+                            "city_terrain"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "continent": "north_america"
+                },
+                {
+                    "factor": "0.1",
+                    "continent": "europe"
+                },
+                {
+                    "factor": "0.5",
+                    "superregion": "ynn_superregion"
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "superregion": "gerudia_superregion",
+                        "continent": [
+                            "asia",
+                            "africa"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "region": [
+                            "east_effelai_region",
+                            "turtleback_isle_region",
+                            "dry_coast_region",
+                            "severed_coast_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "OR": {
+                        "region": [
+                            "bloodgroves_region",
+                            "trollsbay_region",
+                            "haraf_region",
+                            "tor_nayyi_region",
+                            "severed_coast_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "2.0",
+                    "FROM": {
+                        "has_country_flag": "encourage_cash_crops_flag"
+                    }
+                },
+                {
+                    "factor": "1.1",
+                    "FROM": {
+                        "is_cannorian_halfling_primary_culture": "yes"
+                    }
+                }
+            ]
+        }
+    },
+    "cocoa": {
+        "color": [
+            "0.45",
+            "0.21",
+            "0.09"
+        ],
+        "modifier": {
+            "manpower_recovery_speed": "0.05"
+        },
+        "province": {
+            "local_manpower_modifier": "0.10"
+        },
+        "chance": {
+            "factor": "15",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "OR": {
+                        "continent": [
+                            "europe",
+                            "serpentspine",
+                            "africa"
+                        ],
+                        "superregion": "forbidden_lands_superregion"
+                    }
+                },
+                {
+                    "factor": "0",
+                    "is_random_new_world": "yes",
+                    "NOT": {
+                        "continent": "new_world"
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "has_terrain": [
+                            "glacier",
+                            "steppe",
+                            "forest",
+                            "woods",
+                            "marsh",
+                            "cavern",
+                            "dwarven_hold",
+                            "dwarven_hold_surface",
+                            "dwarven_road"
+                        ],
+                        "has_climate": [
+                            "arid",
+                            "arctic"
+                        ],
+                        "has_winter": [
+                            "mild_winter",
+                            "normal_winter",
+                            "severe_winter"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "continent": "south_america"
+                },
+                {
+                    "factor": "2.5",
+                    "has_terrain": "jungle",
+                    "OR": {
+                        "region": [
+                            "ruined_isles_region",
+                            "reapers_coast_region",
+                            "haraf_region",
+                            "tor_nayyi_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "region": [
+                            "east_effelai_region",
+                            "turtleback_isle_region",
+                            "dry_coast_region",
+                            "severed_coast_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.15",
+                    "area": "domandrod_gladeway_2_area"
+                }
+            ]
+        }
+    },
+    "silk": {
+        "color": [
+            "0.72",
+            "0.10",
+            "0.10"
+        ],
+        "modifier": {
+            "num_accepted_cultures": "1"
+        },
+        "province": {
+            "province_trade_power_value": "2"
+        },
+        "chance": {
+            "factor": "5",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "NOT": {
+                        "region": "domandrod_region",
+                        "area": [
+                            "westnest_area",
+                            "eastnest_area"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "has_terrain": [
+                            "highlands",
+                            "mountain",
+                            "marsh",
+                            "steppe",
+                            "coastline",
+                            "desert",
+                            "coastal_desert",
+                            "hills",
+                            "drylands",
+                            "glacier"
+                        ],
+                        "has_climate": [
+                            "arid",
+                            "arctic"
+                        ],
+                        "has_winter": [
+                            "mild_winter",
+                            "normal_winter",
+                            "severe_winter"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.25",
+                    "region": "domandrod_region"
+                },
+                {
+                    "factor": "13",
+                    "OR": {
+                        "area": [
+                            "westnest_area",
+                            "eastnest_area"
+                        ]
+                    }
+                },
+                {
+                    "factor": "2.0",
+                    "FROM": {
+                        "has_country_flag": "encourage_cash_crops_flag"
+                    }
+                }
+            ]
+        }
+    },
+    "dyes": {
+        "color": [
+            "0.63",
+            "0.17",
+            "0.50"
+        ],
+        "modifier": {
+            "heir_chance": "0.33"
+        },
+        "province": {
+            "province_trade_power_modifier": "0.10"
+        },
+        "chance": {
+            "factor": "15",
+            "modifier": [
+                {
+                    "factor": "0.1",
+                    "continent": "europe"
+                },
+                {
+                    "factor": "0",
+                    "NOT": {
+                        "has_terrain": "jungle",
+                        "province_id": "2939",
+                        "region": "bloodgroves_region",
+                        "continent": "africa",
+                        "area": "corinsfield_area"
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "has_climate": [
+                            "arid",
+                            "arctic"
+                        ],
+                        "has_winter": [
+                            "mild_winter",
+                            "normal_winter",
+                            "severe_winter"
+                        ]
+                    },
+                    "NOT": {
+                        "province_id": "2939",
+                        "region": "bloodgroves_region",
+                        "continent": "africa",
+                        "area": "corinsfield_area"
+                    }
+                },
+                {
+                    "factor": "0",
+                    "continent": "africa",
+                    "NOT": {
+                        "area": [
+                            "velanynosy_area",
+                            "porhonozy_area",
+                            "bivirir_area",
+                            "inner_rankaty_islands_area",
+                            "outer_rankaty_islands_area"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "region": "throden_gokad_region"
+                },
+                {
+                    "factor": "4",
+                    "has_terrain": "city_terrain"
+                },
+                {
+                    "factor": "1000",
+                    "province_id": "2939"
+                },
+                {
+                    "factor": "1.25",
+                    "area": "domandrod_gladeway_2_area"
+                },
+                {
+                    "factor": "2.0",
+                    "FROM": {
+                        "has_country_flag": "encourage_cash_crops_flag"
+                    }
+                },
+                {
+                    "factor": "2.6",
+                    "has_terrain": "bloodgroves"
+                },
+                {
+                    "factor": "2.0",
+                    "province_id": "2807"
+                }
+            ]
+        }
+    },
+    "tropical_wood": {
+        "color": [
+            "0.45",
+            "0.47",
+            "0.09"
+        ],
+        "modifier": {
+            "development_cost": "-0.05"
+        },
+        "province": {
+            "local_build_cost": "-0.2"
+        },
+        "chance": {
+            "factor": "25",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "NOT": {
+                        "superregion": "deepwoods_superregion"
+                    },
+                    "continent": "europe"
+                },
+                {
+                    "factor": "0",
+                    "NOT": {
+                        "has_terrain": [
+                            "jungle",
+                            "ancient_forest",
+                            "gladeway"
+                        ],
+                        "region": [
+                            "mushroom_forest_region",
+                            "bloodgroves_region",
+                            "yezel_mora_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "region": "ardimya_region"
+                },
+                {
+                    "factor": "2",
+                    "OR": {
+                        "region": [
+                            "ruined_isles_region",
+                            "reapers_coast_region",
+                            "haraf_region",
+                            "tor_nayyi_region",
+                            "south_effelai_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "11.5",
+                    "region": "mushroom_forest_region"
+                },
+                {
+                    "factor": "0",
+                    "has_terrain": "mushroom_forest_terrain"
+                },
+                {
+                    "factor": "0.5",
+                    "region": "bloodgroves_region",
+                    "NOT": {
+                        "has_terrain": [
+                            "forest",
+                            "woods",
+                            "bloodgroves"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.1",
+                    "region": "domandrod_region"
+                },
+                {
+                    "factor": "1.2",
+                    "region": "yezel_mora_region"
+                },
+                {
+                    "factor": "2.0",
+                    "FROM": {
+                        "has_country_flag": "encourage_cash_crops_flag"
+                    }
+                }
+            ]
+        }
+    },
+    "livestock": {
+        "color": [
+            "0.72",
+            "0.49",
+            "0.44"
+        ],
+        "modifier": {
+            "cavalry_cost": "-0.1"
+        },
+        "province": {
+            "supply_limit_modifier": "0.5"
+        },
+        "chance": {
+            "factor": "30",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "OR": {
+                        "has_terrain": [
+                            "glacier",
+                            "marsh",
+                            "jungle",
+                            "coastline",
+                            "hills",
+                            "forest",
+                            "woods",
+                            "mountain",
+                            "city_terrain",
+                            "ancient_forest",
+                            "gladeway",
+                            "bloodgroves"
+                        ],
+                        "area": [
+                            "westnest_area",
+                            "eastnest_area"
+                        ],
+                        "region": "yezel_mora_region"
+                    },
+                    "NOT": {
+                        "region": "mushroom_forest_region"
+                    }
+                },
+                {
+                    "factor": "0.05",
+                    "OR": {
+                        "has_terrain": [
+                            "dwarven_hold",
+                            "dwarven_hold_surface"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0.1",
+                    "has_terrain": "dwarven_road"
+                },
+                {
+                    "factor": "0.2",
+                    "has_terrain": "cavern"
+                },
+                {
+                    "factor": "0.75",
+                    "OR": {
+                        "has_winter": "severe_winter",
+                        "has_terrain": "mushroom_forest_terrain"
+                    }
+                },
+                {
+                    "factor": "1.25",
+                    "OR": {
+                        "has_terrain": [
+                            "desert",
+                            "savannah",
+                            "highlands",
+                            "drylands"
+                        ],
+                        "has_climate": "arid"
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "has_terrain": "steppe"
+                },
+                {
+                    "factor": "1.25",
+                    "has_terrain": "grasslands"
+                },
+                {
+                    "factor": "2",
+                    "superregion": "taychend_superregion"
+                },
+                {
+                    "factor": "2",
+                    "owner": {
+                        "has_country_flag": "estate_nobles_G57_land_golden_ears_flag"
+                    }
+                },
+                {
+                    "factor": "3.3",
+                    "region": "mushroom_forest_region"
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "province_id": [
+                            "4236",
+                            "2978",
+                            "2914"
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "incense": {
+        "color": [
+            "0.89",
+            "0.79",
+            "0.47"
+        ],
+        "modifier": {
+            "tolerance_own": "0.5"
+        },
+        "province": {
+            "trade_value_modifier": "0.1"
+        },
+        "chance": {
+            "factor": "8",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "OR": {
+                        "continent": "europe",
+                        "region": [
+                            "northern_pass_region",
+                            "serpents_vale_region",
+                            "khaashalg_region",
+                            "moduk_region"
+                        ],
+                        "has_climate": "arctic"
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "has_terrain": [
+                            "mountain",
+                            "cavern",
+                            "dwarven_hold",
+                            "dwarven_hold_surface",
+                            "dwarven_road"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.25",
+                    "OR": {
+                        "superregion": [
+                            "bulwar_superregion",
+                            "ynn_superregion"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "province_id": [
+                            "4236",
+                            "2978",
+                            "2914"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.25",
+                    "region": "domandrod_region"
+                },
+                {
+                    "factor": "2.0",
+                    "FROM": {
+                        "has_country_flag": "encourage_cash_crops_flag"
+                    }
+                },
+                {
+                    "factor": "3",
+                    "has_terrain": "bloodgroves"
+                }
+            ]
+        }
+    },
+    "glass": {
+        "color": [
+            "0.0",
+            "0.60",
+            "0.45"
+        ],
+        "modifier": {
+            "dip_tech_cost_modifier": "-0.05"
+        },
+        "province": {
+            "local_production_efficiency": "0.1"
+        },
+        "chance": {
+            "factor": "5",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "NOT": {
+                        "development": "18",
+                        "has_terrain": [
+                            "city_terrain",
+                            "dwarven_hold",
+                            "dwarven_hold_surface"
+                        ]
+                    }
+                },
+                {
+                    "factor": "2.0",
+                    "development": "22"
+                },
+                {
+                    "factor": "2",
+                    "has_terrain": "city_terrain"
+                },
+                {
+                    "factor": "1000",
+                    "province_id": "4238"
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "province_id": [
+                            "4236",
+                            "2978",
+                            "2914"
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "paper": {
+        "color": [
+            "0.9",
+            "0.86",
+            "0.71"
+        ],
+        "modifier": {
+            "adm_tech_cost_modifier": "-0.05"
+        },
+        "province": {
+            "local_state_maintenance_modifier": "-0.1"
+        },
+        "chance": {
+            "factor": "5",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "NOT": {
+                        "development": "18",
+                        "has_terrain": [
+                            "city_terrain",
+                            "dwarven_hold",
+                            "dwarven_hold_surface"
+                        ]
+                    }
+                },
+                {
+                    "factor": "2.0",
+                    "development": "22"
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "province_id": [
+                            "4236",
+                            "2978",
+                            "2914"
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "gems": {
+        "color": [
+            "0.96",
+            "0.78",
+            "0.78"
+        ],
+        "modifier": {
+            "inflation_reduction": "0.05"
+        },
+        "province": {
+            "local_tax_modifier": "0.15"
+        },
+        "chance": {
+            "factor": "5",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "is_random_new_world": "yes",
+                    "NOT": {
+                        "continent": "new_world"
+                    }
+                },
+                {
+                    "factor": "0.1",
+                    "continent": "europe",
+                    "OR": {
+                        "has_terrain": [
+                            "forest",
+                            "woods",
+                            "drylands",
+                            "grasslands",
+                            "savannah",
+                            "steppe",
+                            "coastline",
+                            "coastal_desert",
+                            "marsh"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "NOT": {
+                        "has_terrain": "coastline"
+                    },
+                    "continent": "oceania"
+                },
+                {
+                    "factor": "0",
+                    "continent": "africa",
+                    "NOT": {
+                        "AND": {
+                            "has_port": "yes",
+                            "OR": {
+                                "area": [
+                                    "bavabetsaro_area",
+                                    "visage_isles_area",
+                                    "daagalkauva_area",
+                                    "merfolk_tip_area",
+                                    "bariga_vumb_area",
+                                    "old_djinnakah_area",
+                                    "mnemba_ziidan_area",
+                                    "igerya_isles_area"
+                                ]
+                            }
+                        }
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "OR": {
+                        "continent": [
+                            "south_america",
+                            "north_america"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "OR": {
+                        "has_terrain": [
+                            "mountain",
+                            "jungle",
+                            "hills",
+                            "highlands",
+                            "dwarven_hold",
+                            "dwarven_hold_surface",
+                            "coastline"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "is_random_new_world": "yes",
+                    "has_terrain": "mountain",
+                    "continent": "new_world"
+                },
+                {
+                    "factor": "1.5",
+                    "normal_or_historical_nations": "no"
+                },
+                {
+                    "factor": "2",
+                    "region": "dalaire_region"
+                },
+                {
+                    "factor": "1.5",
+                    "superregion": "gerudia_superregion"
+                },
+                {
+                    "factor": "0.6",
+                    "superregion": "escann_superregion"
+                },
+                {
+                    "factor": "1.2",
+                    "has_terrain": "cavern",
+                    "superregion": "west_serpentspine_superregion"
+                },
+                {
+                    "factor": "1.2",
+                    "region": "turtleback_isle_region"
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "province_id": [
+                            "4236",
+                            "2978",
+                            "2914"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.25",
+                    "region": "domandrod_region"
+                },
+                {
+                    "factor": "2.0",
+                    "FROM": {
+                        "has_country_flag": "encourage_cash_crops_flag"
+                    }
+                },
+                {
+                    "factor": "10",
+                    "area": "arg_ordstun_area"
+                },
+                {
+                    "factor": "100",
+                    "OR": {
+                        "province_id": [
+                            "2948",
+                            "4338"
+                        ]
+                    }
+                },
+                {
+                    "factor": "4",
+                    "owner": {
+                        "has_country_modifier": "G55_increased_gem_chance"
+                    }
+                },
+                {
+                    "factor": "4",
+                    "FROM": {
+                        "has_country_flag": "H76_increased_gem_chance"
+                    }
+                },
+                {
+                    "factor": "4",
+                    "FROM": {
+                        "overlord": {
+                            "has_country_flag": "H76_increased_gem_chance"
+                        }
+                    },
+                    "continent": "serpentspine"
+                }
+            ]
+        }
+    },
+    "coal": {
+        "color": [
+            "0.0",
+            "1.0",
+            "1.0"
+        ],
+        "is_latent": "yes",
+        "is_valuable": "yes",
+        "rnw_latent_chance": "7",
+        "trigger": {
+            "OR": {
+                "development": "20",
+                "owner": {
+                    "innovativeness": "20"
+                }
+            },
+            "if": {
+                "limit": {
+                    "owner": {
+                        "NOT": {
+                            "has_country_flag": [
+                                "earlier_coal_available",
+                                "even_earlier_coal_available"
+                            ]
+                        }
+                    }
+                },
+                "provincial_institution_progress": {
+                    "which": "enlightenment",
+                    "value": "100"
+                },
+                "owner": {
+                    "has_institution": "enlightenment"
+                }
+            },
+            "else_if": {
+                "limit": {
+                    "owner": {
+                        "has_country_flag": "even_earlier_coal_available"
+                    }
+                },
+                "provincial_institution_progress": {
+                    "which": "global_trade",
+                    "value": "100"
+                },
+                "owner": {
+                    "has_institution": "global_trade",
+                    "innovativeness": "50"
+                }
+            },
+            "else": {
+                "provincial_institution_progress": {
+                    "which": "manufactories",
+                    "value": "100"
+                },
+                "owner": {
+                    "has_institution": "manufactories",
+                    "adm_tech": "23"
+                }
+            }
+        },
+        "modifier": {
+            "global_trade_goods_size_modifier": "0.1"
+        },
+        "province": {
+            "local_state_maintenance_modifier": "-0.2"
+        },
+        "chance": {
+            "factor": "1"
+        }
+    },
+    "cloves": {
+        "color": [
+            "1.0",
+            "0.5",
+            "0.85"
+        ],
+        "modifier": {
+            "trade_efficiency": "0.05"
+        },
+        "province": {
+            "province_trade_power_modifier": "0.2"
+        },
+        "chance": {
+            "factor": "80",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "OR": {
+                        "NOT": {
+                            "region": "fahvanosy_region"
+                        },
+                        "area": [
+                            "havafonosy_area",
+                            "bavabetsaro_area"
+                        ]
+                    }
+                },
+                {
+                    "factor": "5",
+                    "area": "velanynosy_area"
+                },
+                {
+                    "factor": "2.0",
+                    "FROM": {
+                        "has_country_flag": "encourage_cash_crops_flag"
+                    }
+                }
+            ]
+        }
+    },
+    "unknown": {
+        "color": [
+            "0.5",
+            "0.5",
+            "0.5"
+        ]
+    },
+    "damestear": {
+        "color": [
+            "0",
+            "230",
+            "230"
+        ],
+        "modifier": {
+            "all_power_cost": "-0.05"
+        },
+        "province": {
+            "local_unrest": "3"
+        },
+        "chance": {
+            "factor": "10000",
+            "modifier": {
+                "factor": "0",
+                "NOT": {
+                    "has_province_modifier": "the_glowing_city"
+                }
+            }
+        }
+    },
+    "precursor_relics": {
+        "color": [
+            "230",
+            "230",
+            "30"
+        ],
+        "modifier": {
+            "trade_efficiency": "0.05",
+            "technology_cost": "-0.05"
+        },
+        "province": {
+            "local_development_cost": "-0.15"
+        },
+        "chance": {
+            "factor": "10000",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "NOT": {
+                        "has_province_modifier": [
+                            "god_fragment_ruins",
+                            "the_dragon_house",
+                            "vault_ruins",
+                            "portal_nexus",
+                            "floating_city_crash_site"
+                        ],
+                        "region": "domandrod_region",
+                        "province_id": "6838"
+                    }
+                },
+                {
+                    "factor": "0.0001",
+                    "region": "domandrod_region"
+                }
+            ]
+        }
+    },
+    "mithril": {
+        "color": [
+            "220",
+            "238",
+            "251"
+        ],
+        "modifier": {
+            "prestige": "1"
+        },
+        "province": {
+            "shock_damage_received": "-0.01",
+            "shock_damage": "0.02"
+        },
+        "chance": {
+            "factor": "1",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "NOT": {
+                        "continent": "serpentspine"
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "region": [
+                            "northern_pass_region",
+                            "serpents_vale_region"
+                        ]
+                    },
+                    "NOT": {
+                        "province_id": [
+                            "4120",
+                            "4121"
+                        ],
+                        "area": "lonely_mountains_area"
+                    }
+                },
+                {
+                    "factor": "3",
+                    "province_group": "hold_province"
+                },
+                {
+                    "factor": "1.5",
+                    "has_terrain": "dwarven_hold"
+                },
+                {
+                    "factor": "5",
+                    "has_terrain": "cavern"
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "province_id": [
+                            "2978",
+                            "2914"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1000",
+                    "OR": {
+                        "province_id": [
+                            "4236",
+                            "4334"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1000",
+                    "OR": {
+                        "has_province_modifier": [
+                            "dwarovar_mithrilarm_mine",
+                            "dwarovar_huge_mithril_cave"
+                        ]
+                    }
+                },
+                {
+                    "factor": "1.5",
+                    "FROM": {
+                        "has_country_flag": "mithradhum_mithril"
+                    },
+                    "NOT": {
+                        "area": "mithradhum_area"
+                    }
+                },
+                {
+                    "factor": "2",
+                    "FROM": {
+                        "has_reform": "dwarovar_treasures_of_our_forefathers"
+                    }
+                },
+                {
+                    "factor": "3",
+                    "OR": {
+                        "area": [
+                            "gor_burad_area",
+                            "buradforge_area"
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "fungi": {
+        "color": [
+            "86",
+            "51",
+            "63"
+        ],
+        "modifier": {
+            "land_attrition": "-0.1"
+        },
+        "province": {
+            "local_development_cost": "-0.1"
+        },
+        "chance": {
+            "factor": "5",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "NOT": {
+                        "continent": "serpentspine",
+                        "region": [
+                            "mushroom_forest_region",
+                            "domandrod_region",
+                            "yezel_mora_region"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0",
+                    "continent": "serpentspine",
+                    "NOT": {
+                        "has_terrain": [
+                            "cavern",
+                            "dwarven_hold",
+                            "dwarven_hold_surface",
+                            "dwarven_road"
+                        ]
+                    }
+                },
+                {
+                    "factor": "3",
+                    "has_terrain": "cavern"
+                },
+                {
+                    "factor": "0.6",
+                    "has_terrain": "dwarven_road"
+                },
+                {
+                    "factor": "0.25",
+                    "OR": {
+                        "has_terrain": [
+                            "dwarven_hold",
+                            "dwarven_hold_surface"
+                        ]
+                    }
+                },
+                {
+                    "factor": "100",
+                    "OR": {
+                        "has_province_modifier": "big_fungi",
+                        "region": "mushroom_forest_region"
+                    }
+                },
+                {
+                    "factor": "6",
+                    "has_terrain": "mushroom_forest_terrain"
+                },
+                {
+                    "factor": "5",
+                    "region": "yezel_mora_region"
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "province_id": [
+                            "4236",
+                            "2978",
+                            "2914"
+                        ]
+                    }
+                },
+                {
+                    "factor": "20",
+                    "area": "drunken_pass_area"
+                }
+            ]
+        }
+    },
+    "serpentbloom": {
+        "color": [
+            "82",
+            "15",
+            "106"
+        ],
+        "modifier": {
+            "global_supply_limit_modifier": "0.10"
+        },
+        "province": {
+            "local_manpower_modifier": "0.10"
+        },
+        "chance": {
+            "factor": "10",
+            "modifier": [
+                {
+                    "factor": "0",
+                    "NOT": {
+                        "continent": "serpentspine"
+                    }
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "region": [
+                            "northern_pass_region",
+                            "serpents_vale_region"
+                        ]
+                    },
+                    "NOT": {
+                        "province_id": [
+                            "4120",
+                            "4121"
+                        ]
+                    }
+                },
+                {
+                    "factor": "3",
+                    "has_terrain": "cavern"
+                },
+                {
+                    "factor": "0.5",
+                    "province_group": "hold_province"
+                },
+                {
+                    "factor": "0",
+                    "OR": {
+                        "province_id": [
+                            "4236",
+                            "2978",
+                            "2914"
+                        ]
+                    }
+                },
+                {
+                    "factor": "0.5",
+                    "OR": {
+                        "area": [
+                            "buradforge_area",
+                            "arg_ordstun_area"
+                        ]
+                    }
+                },
+                {
+                    "factor": "35",
+                    "area": "drunken_pass_area"
+                }
+            ]
+        }
+    }
+}
