@@ -85,4 +85,9 @@ add_permanent_province_modifier = {
 
 ## Version 0.1.14 - September 27th 2024
 
-- Fixed a bug which would result in properties that follow the format `ABC = { DEF = { GHI = JKL } }` to throw errors during parsing
+- Fixed a bug which would result in properties that follow the format `ABC = { DEF = { GHI = JKL } }` to throw errors during parsing.
+- Changed supported engine from node `^20` to `^22`.
+- `nanoid` from `3.3.7` to `3.3.8` (development dependency)
+- `typescript` from `5.6.2` to `5.7.2` (development dependency)
+- `vitest` from `2.1.1` to `2.1.8` (development dependency)
+- `@types/node` from `20.14.10` to `22.10.2` (development dependency)
