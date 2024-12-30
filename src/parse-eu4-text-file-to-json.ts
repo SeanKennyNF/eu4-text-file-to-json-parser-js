@@ -38,13 +38,21 @@ export const parseEu4TextFileToJson = async(
       // This is in the format "property_name = { ... }"
       const splitCleanedRow = cleanedRow.split('=').map((element) => element.trim());
       const propertyName = splitCleanedRow[0].trim();
-      const propertyValue = splitCleanedRow.slice(1).join('=').trim();
+      let propertyValue = splitCleanedRow.slice(1).join('=').trim();
 
       if(/^({)?(\ )*([a-zA-Z0-9'_\.-])+(\ )*=(\ )*(.)*$/.test(propertyValue)) {
         // This is in the format "property_name = { inner_property_name = 123456 }" OR
         // This is in the format "property_name = { inner_property_name = { inner_inner_property_name = 1000 }}"
         // In that second example, we need to have some kind of loop here to keep digging deeper into the since inner_inner_property_name could
         // also have a json object as a key.
+
+        const numberOfOpeningCurlyBraces = (cleanedRow.match(/{/g) ?? []).length;
+        const numberOfClosingCurlyBraces = (cleanedRow.match(/}/g) ?? []).length;
+        const numberOfNestingLevelsThatShouldRemainAtTheEnd = numberOfOpeningCurlyBraces - numberOfClosingCurlyBraces;
+
+        if(numberOfNestingLevelsThatShouldRemainAtTheEnd > 0) {
+          propertyValue = propertyValue.concat('}'.repeat(numberOfNestingLevelsThatShouldRemainAtTheEnd));
+        }
 
         currentKeyToPushTo = `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? seperator : ''}${propertyName}`;
 
@@ -88,7 +96,7 @@ export const parseEu4TextFileToJson = async(
           valueToPush: currentValueToEvaluate
         });
 
-        while(levelsNestedThatNeedToBeUnNested > 0) {
+        while(levelsNestedThatNeedToBeUnNested > numberOfNestingLevelsThatShouldRemainAtTheEnd) {
           currentKeyToPushTo = currentKeyToPushTo
             .split(seperator)
             .slice(0, -1)
