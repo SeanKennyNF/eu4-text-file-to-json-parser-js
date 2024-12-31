@@ -32,7 +32,12 @@
     ]
   },
   "ekyunimoy_region": {
-    "areas": ["mokumoy_area", "aiyudopan_area", "cialeed_area", "tamsokh_area"]
+    "areas": [
+      "mokumoy_area",
+      "aiyudopan_area",
+      "cialeed_area",
+      "tamsokh_area"
+    ]
   },
   "haraf_region": {
     "areas": [
@@ -60,7 +65,11 @@
     ]
   },
   "mushroom_forest_region": {
-    "areas": ["sporeglade_area", "mushroom_depths_area", "sky_cap_range_area"]
+    "areas": [
+      "sporeglade_area",
+      "mushroom_depths_area",
+      "sky_cap_range_area"
+    ]
   },
   "amadia_region": {
     "areas": [
@@ -242,7 +251,10 @@
       "muuduam_area",
       "soaring_forest_area"
     ],
-    "monsoon": ["00.01.01", "00.04.30"]
+    "monsoon": [
+      "00.01.01",
+      "00.04.30"
+    ]
   },
   "south_effelai_region": {
     "areas": [
@@ -251,7 +263,10 @@
       "rockfall_jungle_area",
       "junglemouth_area"
     ],
-    "monsoon": ["00.01.01", "00.05.30"]
+    "monsoon": [
+      "00.01.01",
+      "00.05.30"
+    ]
   },
   "kalavend_region": {
     "areas": [
@@ -276,13 +291,25 @@
       "red_isle_area",
       "leechdens_maw_area"
     ],
-    "monsoon": ["00.12.01", "00.12.30", "00.01.01", "00.04.30"]
+    "monsoon": [
+      "00.12.01",
+      "00.12.30",
+      "00.01.01",
+      "00.04.30"
+    ]
   },
   "turtleback_isle_region": {
-    "areas": ["turtlerear_area", "turtlefeet_area", "turtlehead_area"]
+    "areas": [
+      "turtlerear_area",
+      "turtlefeet_area",
+      "turtlehead_area"
+    ]
   },
   "north_ruined_isles_region": {
-    "areas": ["silsenald_isles_area", "fiorgram_island_area"]
+    "areas": [
+      "silsenald_isles_area",
+      "fiorgram_island_area"
+    ]
   },
   "endralliande_region": {
     "areas": [
@@ -913,7 +940,10 @@
       "bernalia_area",
       "grahamia_area"
     ],
-    "monsoon": ["00.06.01", "00.09.30"]
+    "monsoon": [
+      "00.06.01",
+      "00.09.30"
+    ]
   },
   "horashesh_region": {
     "areas": [
@@ -937,7 +967,10 @@
       "bivirir_area",
       "porhonozy_area"
     ],
-    "monsoon": ["00.05.01", "00.08.30"]
+    "monsoon": [
+      "00.05.01",
+      "00.08.30"
+    ]
   },
   "khetapera_region": {
     "areas": [
@@ -951,7 +984,10 @@
       "shena_muhaqaar_area",
       "mattabo_area"
     ],
-    "monsoon": ["00.05.01", "00.08.30"]
+    "monsoon": [
+      "00.05.01",
+      "00.08.30"
+    ]
   },
   "yezel_mora_region": {
     "areas": [
@@ -991,7 +1027,10 @@
       "pikakely_area",
       "velanynosy_area"
     ],
-    "monsoon": ["00.05.01", "00.08.30"]
+    "monsoon": [
+      "00.05.01",
+      "00.08.30"
+    ]
   },
   "throden_gokad_region": {
     "areas": [
@@ -1009,7 +1048,10 @@
       "inner_rankaty_islands_area",
       "outer_rankaty_islands_area"
     ],
-    "monsoon": ["00.04.01", "00.07.30"]
+    "monsoon": [
+      "00.04.01",
+      "00.07.30"
+    ]
   },
   "katala_raz_region": {
     "areas": [
@@ -1031,7 +1073,10 @@
       "ishyaga_area",
       "peta_ra_thusk_area"
     ],
-    "monsoon": ["00.04.01", "00.07.30"]
+    "monsoon": [
+      "00.04.01",
+      "00.07.30"
+    ]
   },
   "odu_kherass_region": {
     "areas": [
@@ -1044,7 +1089,10 @@
       "yok_ra_shaga_area",
       "sut_ra_thon_area"
     ],
-    "monsoon": ["00.03.01", "00.06.30"]
+    "monsoon": [
+      "00.03.01",
+      "00.06.30"
+    ]
   },
   "jasiir_jadid_region": {
     "areas": [
@@ -1063,7 +1111,10 @@
       "qasri_abeesooyinka_area",
       "dhal_baeidag_area"
     ],
-    "monsoon": ["00.03.01", "00.05.30"]
+    "monsoon": [
+      "00.03.01",
+      "00.05.30"
+    ]
   },
   "ardimya_region": {
     "areas": [
@@ -1084,7 +1135,12 @@
       "visage_isles_area",
       "fobunaicha_area"
     ],
-    "monsoon": ["00.11.01", "00.12.30", "00.01.01", "00.03.30"]
+    "monsoon": [
+      "00.11.01",
+      "00.12.30",
+      "00.01.01",
+      "00.03.30"
+    ]
   },
   "bamaliwuni_region": {
     "areas": [
@@ -1100,7 +1156,10 @@
       "kukihombe_area",
       "igerya_isles_area"
     ],
-    "monsoon": ["00.02.01", "00.05.30"]
+    "monsoon": [
+      "00.02.01",
+      "00.05.30"
+    ]
   },
   "ishyamtumu_region": {
     "areas": [
@@ -1113,7 +1172,10 @@
       "rindukubunza_area",
       "gakeigiti_area"
     ],
-    "monsoon": ["00.02.01", "00.05.30"]
+    "monsoon": [
+      "00.02.01",
+      "00.05.30"
+    ]
   },
   "yetefesefi_region": {
     "areas": [
@@ -1126,7 +1188,10 @@
       "fetengaben_area",
       "werikafan_area"
     ],
-    "monsoon": ["00.02.01", "00.04.30"]
+    "monsoon": [
+      "00.02.01",
+      "00.04.30"
+    ]
   },
   "telekenid_region": {
     "areas": [
@@ -1143,7 +1208,10 @@
       "sedarfan_area",
       "keychashow_area"
     ],
-    "monsoon": ["00.06.01", "00.08.30"]
+    "monsoon": [
+      "00.06.01",
+      "00.08.30"
+    ]
   },
   "denibari_region": {
     "areas": [
@@ -1159,7 +1227,10 @@
       "kirksanlashan_area",
       "saposon_area"
     ],
-    "monsoon": ["00.02.01", "00.04.30"]
+    "monsoon": [
+      "00.02.01",
+      "00.04.30"
+    ]
   },
   "dreksaret_region": {
     "areas": [
@@ -1383,7 +1454,11 @@
       "area_1_area"
     ]
   },
-  "north_aelantir_coast_region": { "areas": ["north_aelantir_coast_area"] },
+  "north_aelantir_coast_region": {
+    "areas": [
+      "north_aelantir_coast_area"
+    ]
+  },
   "southeast_aelantir_coast_region": {
     "areas": [
       "leechdens_area",
@@ -1403,25 +1478,58 @@
     ]
   },
   "south_uelos_lament_ocean_region": {
-    "areas": ["south_uelos_lament_sea_area", "far_uelos_lament_sea_area"]
+    "areas": [
+      "south_uelos_lament_sea_area",
+      "far_uelos_lament_sea_area"
+    ]
   },
   "south_sarhal_coast_region": {
-    "areas": ["fahvanosy_sea_area", "mabeedi_sea_area"]
+    "areas": [
+      "fahvanosy_sea_area",
+      "mabeedi_sea_area"
+    ]
   },
-  "west_salahad_coast_region": { "areas": ["west_salahad_sea_area"] },
+  "west_salahad_coast_region": {
+    "areas": [
+      "west_salahad_sea_area"
+    ]
+  },
   "cleaved_sea_coast_region": {
-    "areas": ["kaydhano_coast_area", "cleaved_sea_area"]
+    "areas": [
+      "kaydhano_coast_area",
+      "cleaved_sea_area"
+    ]
   },
   "north_ocean_of_the_lost_region": {
-    "areas": ["north_ocean_of_the_lost_area"]
+    "areas": [
+      "north_ocean_of_the_lost_area"
+    ]
   },
   "south_ocean_of_the_lost_region": {
-    "areas": ["south_ocean_of_the_lost_area"]
+    "areas": [
+      "south_ocean_of_the_lost_area"
+    ]
   },
-  "punctured_coast_region": { "areas": ["punctured_coast_area"] },
-  "west_aelantir_coast_region": { "areas": ["west_aelantir_coast_area"] },
-  "torn_sea_region": { "areas": ["torn_sea_area"] },
-  "outer_torn_sea_region": { "areas": ["outer_torn_sea_area"] },
+  "punctured_coast_region": {
+    "areas": [
+      "punctured_coast_area"
+    ]
+  },
+  "west_aelantir_coast_region": {
+    "areas": [
+      "west_aelantir_coast_area"
+    ]
+  },
+  "torn_sea_region": {
+    "areas": [
+      "torn_sea_area"
+    ]
+  },
+  "outer_torn_sea_region": {
+    "areas": [
+      "outer_torn_sea_area"
+    ]
+  },
   "northern_sea_region": {
     "areas": [
       "northern_pass_area",
@@ -1431,17 +1539,39 @@
       "outer_sea_area"
     ]
   },
-  "ringlet_sea_region": { "areas": ["ringlet_sea_area", "the_bridge_area"] },
-  "gulf_of_rahen_region": { "areas": ["gulf_of_rahen_area"] },
-  "northeast_haless_coast_region": { "areas": ["northeast_haless_coast_area"] },
+  "ringlet_sea_region": {
+    "areas": [
+      "ringlet_sea_area",
+      "the_bridge_area"
+    ]
+  },
+  "gulf_of_rahen_region": {
+    "areas": [
+      "gulf_of_rahen_area"
+    ]
+  },
+  "northeast_haless_coast_region": {
+    "areas": [
+      "northeast_haless_coast_area"
+    ]
+  },
   "kedwali_gulf_region": {
-    "areas": ["kedwali_gulf_area", "yarbadda_sea_area"]
+    "areas": [
+      "kedwali_gulf_area",
+      "yarbadda_sea_area"
+    ]
   },
   "dameshead_sea_region": {
-    "areas": ["damesneck_sea_area", "dameshead_sea_area"]
+    "areas": [
+      "damesneck_sea_area",
+      "dameshead_sea_area"
+    ]
   },
   "giants_grave_sea_region": {
-    "areas": ["giants_grave_sea_area", "bay_of_chills_area"]
+    "areas": [
+      "giants_grave_sea_area",
+      "bay_of_chills_area"
+    ]
   },
   "divenhal_sea_region": {
     "areas": [
@@ -1456,15 +1586,30 @@
     ]
   },
   "westcoast_region": {
-    "areas": ["southcoast_area", "westcoast_area", "bay_of_dragons_area"]
+    "areas": [
+      "southcoast_area",
+      "westcoast_area",
+      "bay_of_dragons_area"
+    ]
   },
   "northern_thaw_region": {
-    "areas": ["reaversea_area", "far_thaw_area", "lonely_sea_area"]
+    "areas": [
+      "reaversea_area",
+      "far_thaw_area",
+      "lonely_sea_area"
+    ]
   },
   "broken_sea_region": {
-    "areas": ["broken_sea_approach_area", "broken_sea_area"]
+    "areas": [
+      "broken_sea_approach_area",
+      "broken_sea_area"
+    ]
   },
-  "western_broken_sea_region": { "areas": ["western_broken_sea_area"] },
+  "western_broken_sea_region": {
+    "areas": [
+      "western_broken_sea_area"
+    ]
+  },
   "ruined_sea_region": {
     "areas": [
       "trollsbay_coast_area",
@@ -1474,7 +1619,11 @@
       "reapers_coast_area"
     ]
   },
-  "calamity_pass_region": { "areas": ["calamity_pass_area"] },
+  "calamity_pass_region": {
+    "areas": [
+      "calamity_pass_area"
+    ]
+  },
   "serpents_vale_region": {
     "areas": [
       "royal_terrace_area",
@@ -1656,7 +1805,11 @@
       "krazho_area"
     ]
   },
-  "deepwoods_portal_region": { "areas": ["deepwoods_portal_area"] },
+  "deepwoods_portal_region": {
+    "areas": [
+      "deepwoods_portal_area"
+    ]
+  },
   "rahen_coast_region": {
     "areas": [
       "satarsaya_area",
@@ -1679,7 +1832,10 @@
       "cmor_krueng_area",
       "khindi_area"
     ],
-    "monsoon": ["00.07.01", "00.08.30"]
+    "monsoon": [
+      "00.07.01",
+      "00.08.30"
+    ]
   },
   "rakhadesh_region": {
     "areas": [
@@ -1693,7 +1849,10 @@
       "babhagama_area",
       "ghattub_area"
     ],
-    "monsoon": ["00.07.01", "00.08.30"]
+    "monsoon": [
+      "00.07.01",
+      "00.08.30"
+    ]
   },
   "shamakhad_region": {
     "areas": [
@@ -1719,7 +1878,10 @@
       "raghajandi_area",
       "yodhilakra_area"
     ],
-    "monsoon": ["00.07.01", "00.08.30"]
+    "monsoon": [
+      "00.07.01",
+      "00.08.30"
+    ]
   },
   "lupulan_rainforest_region": {
     "areas": [
@@ -1740,7 +1902,10 @@
       "gehamteg_area",
       "non_chien_area"
     ],
-    "monsoon": ["00.05.01", "00.08.30"]
+    "monsoon": [
+      "00.05.01",
+      "00.08.30"
+    ]
   },
   "bomdan_region": {
     "areas": [
@@ -1755,7 +1920,10 @@
       "dekphre_area",
       "banhlubei_area"
     ],
-    "monsoon": ["00.07.01", "00.08.30"]
+    "monsoon": [
+      "00.07.01",
+      "00.08.30"
+    ]
   },
   "dhujat_region": {
     "areas": [
@@ -1776,7 +1944,10 @@
       "rangadevi_area",
       "dhurajaghan_area"
     ],
-    "monsoon": ["00.07.01", "00.08.30"]
+    "monsoon": [
+      "00.07.01",
+      "00.08.30"
+    ]
   },
   "lower_yanshen_region": {
     "areas": [
@@ -1792,7 +1963,10 @@
       "jinjiang_area",
       "erluxi_area"
     ],
-    "monsoon": ["00.05.01", "00.06.30"]
+    "monsoon": [
+      "00.05.01",
+      "00.06.30"
+    ]
   },
   "moduk_region": {
     "areas": [
@@ -1819,7 +1993,10 @@
       "linyuan_area",
       "yanzhong_area"
     ],
-    "monsoon": ["00.05.01", "00.06.30"]
+    "monsoon": [
+      "00.05.01",
+      "00.06.30"
+    ]
   },
   "demon_hills_region": {
     "areas": [
@@ -1829,7 +2006,10 @@
       "mogutian_area",
       "moryokang_area"
     ],
-    "monsoon": ["00.05.01", "00.06.30"]
+    "monsoon": [
+      "00.05.01",
+      "00.06.30"
+    ]
   },
   "xianjie_region": {
     "areas": [
@@ -1845,7 +2025,10 @@
       "dekaipnam_area",
       "jilin_anb_area"
     ],
-    "monsoon": ["00.05.01", "00.06.30"]
+    "monsoon": [
+      "00.05.01",
+      "00.06.30"
+    ]
   },
   "thidinkai_region": {
     "areas": [
@@ -1867,7 +2050,10 @@
       "ngoen_area",
       "kaiden_area"
     ],
-    "monsoon": ["00.05.01", "00.06.30"]
+    "monsoon": [
+      "00.05.01",
+      "00.06.30"
+    ]
   },
   "ringlet_isles_region": {
     "areas": [
@@ -1878,7 +2064,10 @@
       "ringlet_isles_1_area",
       "ringlet_isles_2_area"
     ],
-    "monsoon": ["00.05.01", "00.06.30"]
+    "monsoon": [
+      "00.05.01",
+      "00.06.30"
+    ]
   },
   "shuvuushudi_region": {
     "areas": [
@@ -1931,7 +2120,10 @@
       "yiguan_area",
       "jiantsiang_area"
     ],
-    "monsoon": ["00.05.01", "00.06.30"]
+    "monsoon": [
+      "00.05.01",
+      "00.06.30"
+    ]
   },
   "nomsyulhan_region": {
     "areas": [
@@ -1948,7 +2140,11 @@
       "nomsyulhan_portal_area"
     ]
   },
-  "debug_region": { "areas": ["debug_area"] },
+  "debug_region": {
+    "areas": [
+      "debug_area"
+    ]
+  },
   "insyaa_ocean_region": {
     "areas": [
       "barrier_islands_area",
@@ -1969,7 +2165,11 @@
     ]
   },
   "insyaan_mushroom_forest_region": {
-    "areas": ["golodhuinga_area", "puhutua_area", "taoropari_area"]
+    "areas": [
+      "golodhuinga_area",
+      "puhutua_area",
+      "taoropari_area"
+    ]
   },
   "yanacotlele_region": {
     "areas": [
@@ -2108,7 +2308,10 @@
     ]
   },
   "titanoflora_valley_region": {
-    "areas": ["titanoflora_valley_1_area", "titanoflora_valley_2_area"]
+    "areas": [
+      "titanoflora_valley_1_area",
+      "titanoflora_valley_2_area"
+    ]
   },
   "titanoflora_savanna_region": {
     "areas": [
@@ -2194,96 +2397,280 @@
       "nalokai_area"
     ]
   },
-  "france_region": { "areas": {} },
-  "scandinavia_region": { "areas": {} },
-  "low_countries_region": { "areas": {} },
-  "italy_region": { "areas": {} },
-  "north_german_region": { "areas": {} },
-  "south_german_region": { "areas": {} },
-  "russia_region": { "areas": {} },
-  "ural_region": { "areas": {} },
-  "iberia_region": { "areas": {} },
-  "british_isles_region": { "areas": {} },
-  "baltic_region": { "areas": {} },
-  "poland_region": { "areas": {} },
-  "ruthenia_region": { "areas": {} },
-  "crimea_region": { "areas": {} },
-  "balkan_region": { "areas": {} },
-  "carpathia_region": { "areas": {} },
-  "egypt_region": { "areas": {} },
-  "maghreb_region": { "areas": {} },
-  "mashriq_region": { "areas": {} },
-  "anatolia_region": { "areas": {} },
-  "persia_region": { "areas": {} },
-  "khorasan_region": { "areas": {} },
-  "caucasia_region": { "areas": {} },
-  "arabia_region": { "areas": {} },
-  "niger_region": { "areas": {} },
-  "guinea_region": { "areas": {} },
-  "sahel_region": { "areas": {} },
-  "horn_of_africa_region": { "areas": {} },
-  "east_africa_region": { "areas": {} },
-  "central_africa_region": { "areas": {} },
-  "kongo_region": { "areas": {} },
-  "central_asia_region": { "areas": {} },
-  "south_africa_region": { "areas": {} },
-  "west_siberia_region": { "areas": {} },
-  "east_siberia_region": { "areas": {} },
-  "mongolia_region": { "areas": {} },
-  "manchuria_region": { "areas": {} },
-  "korea_region": { "areas": {} },
-  "tibet_region": { "areas": {} },
-  "hindusthan_region": { "areas": {} },
-  "bengal_region": { "areas": {} },
-  "west_india_region": { "areas": {} },
-  "deccan_region": { "areas": {} },
-  "coromandel_region": { "areas": {} },
-  "burma_region": { "areas": {} },
-  "japan_region": { "areas": {} },
-  "australia_region": { "areas": {} },
-  "south_china_region": { "areas": {} },
-  "xinan_region": { "areas": {} },
-  "north_china_region": { "areas": {} },
-  "brazil_region": { "areas": {} },
-  "la_plata_region": { "areas": {} },
-  "colombia_region": { "areas": {} },
-  "peru_region": { "areas": {} },
-  "upper_peru_region": { "areas": {} },
-  "malaya_region": { "areas": {} },
-  "moluccas_region": { "areas": {} },
-  "indonesia_region": { "areas": {} },
-  "oceanea_region": { "areas": {} },
-  "indo_china_region": { "areas": {} },
-  "canada_region": { "areas": {} },
-  "great_lakes_region": { "areas": {} },
-  "northeast_america_region": { "areas": {} },
-  "southeast_america_region": { "areas": {} },
-  "mississippi_region": { "areas": {} },
-  "rio_grande_region": { "areas": {} },
-  "great_plains_region": { "areas": {} },
-  "california_region": { "areas": {} },
-  "cascadia_region": { "areas": {} },
-  "hudson_bay_region": { "areas": {} },
-  "mexico_region": { "areas": {} },
-  "central_america_region": { "areas": {} },
-  "carribeans_region": { "areas": {} },
-  "baltic_sea_region": { "areas": {} },
-  "north_atlantic_region": { "areas": {} },
-  "american_east_coast_region": { "areas": {} },
-  "mediterrenean_region": { "areas": {} },
-  "caribbean_sea_region": { "areas": {} },
-  "west_african_sea_region": { "areas": {} },
-  "west_indian_ocean_region": { "areas": {} },
-  "arabian_sea_region": { "areas": {} },
-  "east_indian_ocean_region": { "areas": {} },
-  "south_indian_ocean_region": { "areas": {} },
-  "south_china_sea_region": { "areas": {} },
-  "east_china_sea_region": { "areas": {} },
-  "north_west_pacific_region": { "areas": {} },
-  "south_west_pacific_region": { "areas": {} },
-  "south_east_pacific_region": { "areas": {} },
-  "north_east_pacific_region": { "areas": {} },
-  "pacific_south_america_region": { "areas": {} },
-  "atlantic_south_america_region": { "areas": {} },
-  "south_atlantic_region": { "areas": {} }
+  "france_region": {
+    "areas": {}
+  },
+  "scandinavia_region": {
+    "areas": {}
+  },
+  "low_countries_region": {
+    "areas": {}
+  },
+  "italy_region": {
+    "areas": {}
+  },
+  "north_german_region": {
+    "areas": {}
+  },
+  "south_german_region": {
+    "areas": {}
+  },
+  "russia_region": {
+    "areas": {}
+  },
+  "ural_region": {
+    "areas": {}
+  },
+  "iberia_region": {
+    "areas": {}
+  },
+  "british_isles_region": {
+    "areas": {}
+  },
+  "baltic_region": {
+    "areas": {}
+  },
+  "poland_region": {
+    "areas": {}
+  },
+  "ruthenia_region": {
+    "areas": {}
+  },
+  "crimea_region": {
+    "areas": {}
+  },
+  "balkan_region": {
+    "areas": {}
+  },
+  "carpathia_region": {
+    "areas": {}
+  },
+  "egypt_region": {
+    "areas": {}
+  },
+  "maghreb_region": {
+    "areas": {}
+  },
+  "mashriq_region": {
+    "areas": {}
+  },
+  "anatolia_region": {
+    "areas": {}
+  },
+  "persia_region": {
+    "areas": {}
+  },
+  "khorasan_region": {
+    "areas": {}
+  },
+  "caucasia_region": {
+    "areas": {}
+  },
+  "arabia_region": {
+    "areas": {}
+  },
+  "niger_region": {
+    "areas": {}
+  },
+  "guinea_region": {
+    "areas": {}
+  },
+  "sahel_region": {
+    "areas": {}
+  },
+  "horn_of_africa_region": {
+    "areas": {}
+  },
+  "east_africa_region": {
+    "areas": {}
+  },
+  "central_africa_region": {
+    "areas": {}
+  },
+  "kongo_region": {
+    "areas": {}
+  },
+  "central_asia_region": {
+    "areas": {}
+  },
+  "south_africa_region": {
+    "areas": {}
+  },
+  "west_siberia_region": {
+    "areas": {}
+  },
+  "east_siberia_region": {
+    "areas": {}
+  },
+  "mongolia_region": {
+    "areas": {}
+  },
+  "manchuria_region": {
+    "areas": {}
+  },
+  "korea_region": {
+    "areas": {}
+  },
+  "tibet_region": {
+    "areas": {}
+  },
+  "hindusthan_region": {
+    "areas": {}
+  },
+  "bengal_region": {
+    "areas": {}
+  },
+  "west_india_region": {
+    "areas": {}
+  },
+  "deccan_region": {
+    "areas": {}
+  },
+  "coromandel_region": {
+    "areas": {}
+  },
+  "burma_region": {
+    "areas": {}
+  },
+  "japan_region": {
+    "areas": {}
+  },
+  "australia_region": {
+    "areas": {}
+  },
+  "south_china_region": {
+    "areas": {}
+  },
+  "xinan_region": {
+    "areas": {}
+  },
+  "north_china_region": {
+    "areas": {}
+  },
+  "brazil_region": {
+    "areas": {}
+  },
+  "la_plata_region": {
+    "areas": {}
+  },
+  "colombia_region": {
+    "areas": {}
+  },
+  "peru_region": {
+    "areas": {}
+  },
+  "upper_peru_region": {
+    "areas": {}
+  },
+  "malaya_region": {
+    "areas": {}
+  },
+  "moluccas_region": {
+    "areas": {}
+  },
+  "indonesia_region": {
+    "areas": {}
+  },
+  "oceanea_region": {
+    "areas": {}
+  },
+  "indo_china_region": {
+    "areas": {}
+  },
+  "canada_region": {
+    "areas": {}
+  },
+  "great_lakes_region": {
+    "areas": {}
+  },
+  "northeast_america_region": {
+    "areas": {}
+  },
+  "southeast_america_region": {
+    "areas": {}
+  },
+  "mississippi_region": {
+    "areas": {}
+  },
+  "rio_grande_region": {
+    "areas": {}
+  },
+  "great_plains_region": {
+    "areas": {}
+  },
+  "california_region": {
+    "areas": {}
+  },
+  "cascadia_region": {
+    "areas": {}
+  },
+  "hudson_bay_region": {
+    "areas": {}
+  },
+  "mexico_region": {
+    "areas": {}
+  },
+  "central_america_region": {
+    "areas": {}
+  },
+  "carribeans_region": {
+    "areas": {}
+  },
+  "baltic_sea_region": {
+    "areas": {}
+  },
+  "north_atlantic_region": {
+    "areas": {}
+  },
+  "american_east_coast_region": {
+    "areas": {}
+  },
+  "mediterrenean_region": {
+    "areas": {}
+  },
+  "caribbean_sea_region": {
+    "areas": {}
+  },
+  "west_african_sea_region": {
+    "areas": {}
+  },
+  "west_indian_ocean_region": {
+    "areas": {}
+  },
+  "arabian_sea_region": {
+    "areas": {}
+  },
+  "east_indian_ocean_region": {
+    "areas": {}
+  },
+  "south_indian_ocean_region": {
+    "areas": {}
+  },
+  "south_china_sea_region": {
+    "areas": {}
+  },
+  "east_china_sea_region": {
+    "areas": {}
+  },
+  "north_west_pacific_region": {
+    "areas": {}
+  },
+  "south_west_pacific_region": {
+    "areas": {}
+  },
+  "south_east_pacific_region": {
+    "areas": {}
+  },
+  "north_east_pacific_region": {
+    "areas": {}
+  },
+  "pacific_south_america_region": {
+    "areas": {}
+  },
+  "atlantic_south_america_region": {
+    "areas": {}
+  },
+  "south_atlantic_region": {
+    "areas": {}
+  }
 }
