@@ -91,3 +91,10 @@ add_permanent_province_modifier = {
 - `typescript` from `5.6.2` to `5.7.2` (development dependency)
 - `vitest` from `2.1.1` to `2.1.8` (development dependency)
 - `@types/node` from `20.14.10` to `22.10.2` (development dependency)
+
+## Version 0.1.15 - April 10th 2025
+
+- Fixed a bug which would result in properties that follow the format `ABC = { DEF = { GHI = JKL } EEE = FFF }` to throw errors during parsing.
+- `typescript` from `5.7.2` to `5.8.3` (development dependency)
+- `vitest` from `2.1.8` to `3.1.1` (development dependency)
+- `@types/node` from `22.10.2` to `22.14.0` (development dependency)
