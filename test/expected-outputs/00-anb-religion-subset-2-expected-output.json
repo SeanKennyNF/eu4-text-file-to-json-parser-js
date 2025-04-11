@@ -1,0 +1,697 @@
+{
+    "raheni": {
+        "flags_with_emblem_percentage": "33",
+        "flag_emblem_index_range": [
+            "1",
+            "57"
+        ],
+        "religious_schools": {
+            "starry_eye_school": {
+                "potential_invite_scholar": {
+                    "always": "yes"
+                },
+                "can_invite_scholar": {
+                    "adm_power_cost": "50",
+                    "NOT": {
+                        "anb_has_religious_scholars_trigger": "yes"
+                    },
+                    "OR": {
+                        "AND": {
+                            "reverse_has_opinion": {
+                                "who": "FROM value=150"
+                            },
+                            "OR": {
+                                "alliance_with": "FROM",
+                                "is_subject_of": "FROM",
+                                "overlord_of": "FROM"
+                            },
+                            "hidden_progressive_opinion_for_scholar_trigger": "yes"
+                        },
+                        "any_owned_province": {
+                            "has_province_modifier": "high_philosophy_school_origin_starry_eye"
+                        }
+                    }
+                },
+                "on_invite_scholar": {
+                    "if": {
+                        "limit": {
+                            "NOT": {
+                                "has_country_flag": "dhenijanraj_mission_free_invitations"
+                            },
+                            "has_country_flag": "L62_invite_scholar"
+                        },
+                        "add_adm_power": "-50"
+                    },
+                    "pasiragha_scholar_system": {
+                        "HP_SCHOOL": "starry_eye"
+                    },
+                    "clear_religious_scholar_modifiers_effect": "yes",
+                    "custom_tooltip": "INVITE_SCHOLAR_COUNTRY_TEXT",
+                    "add_country_modifier": {
+                        "name": "starry_eye_scholar_modifier duration=7300"
+                    },
+                    "hidden_effect": {
+                        "if": {
+                            "": ""
+                        }
+                    }
+                },
+                "invite_scholar_modifier_display": "starry_eye_scholar_modifier",
+                "picture": "GFX_icon_high_philosophy_school_starry_eye",
+                "idea_cost": "-0.1",
+                "advisor_cost": "-0.1",
+                "monthly_piety": "-0.001"
+            },
+            "radiant_sun_school": {
+                "potential_invite_scholar": {
+                    "always": "yes"
+                },
+                "can_invite_scholar": {
+                    "adm_power_cost": "50",
+                    "NOT": {
+                        "anb_has_religious_scholars_trigger": "yes"
+                    },
+                    "OR": {
+                        "AND": {
+                            "reverse_has_opinion": {
+                                "who": "FROM value=150"
+                            },
+                            "OR": {
+                                "alliance_with": "FROM",
+                                "is_subject_of": "FROM",
+                                "overlord_of": "FROM"
+                            },
+                            "hidden_progressive_opinion_for_scholar_trigger": "yes"
+                        },
+                        "any_owned_province": {
+                            "has_province_modifier": "high_philosophy_school_origin_radiant_sun"
+                        }
+                    }
+                },
+                "on_invite_scholar": {
+                    "if": {
+                        "limit": {
+                            "NOT": {
+                                "has_country_flag": "dhenijanraj_mission_free_invitations"
+                            },
+                            "has_country_flag": "L62_invite_scholar"
+                        },
+                        "add_adm_power": "-50"
+                    },
+                    "pasiragha_scholar_system": {
+                        "HP_SCHOOL": "radiant_sun"
+                    },
+                    "clear_religious_scholar_modifiers_effect": "yes",
+                    "custom_tooltip": "INVITE_SCHOLAR_COUNTRY_TEXT",
+                    "add_country_modifier": {
+                        "name": "radiant_sun_scholar_modifier duration=7300"
+                    },
+                    "hidden_effect": {
+                        "if": {
+                            "": ""
+                        }
+                    }
+                },
+                "invite_scholar_modifier_display": "radiant_sun_scholar_modifier",
+                "picture": "GFX_icon_high_philosophy_school_radiant_sun",
+                "global_manpower_modifier": "0.1",
+                "development_cost": "-0.1",
+                "monthly_piety": "-0.001"
+            },
+            "orange_sash_school": {
+                "potential_invite_scholar": {
+                    "always": "yes"
+                },
+                "can_invite_scholar": {
+                    "adm_power_cost": "50",
+                    "NOT": {
+                        "anb_has_religious_scholars_trigger": "yes"
+                    },
+                    "OR": {
+                        "AND": {
+                            "reverse_has_opinion": {
+                                "who": "FROM value=150"
+                            },
+                            "OR": {
+                                "alliance_with": "FROM",
+                                "is_subject_of": "FROM",
+                                "overlord_of": "FROM"
+                            },
+                            "hidden_progressive_opinion_for_scholar_trigger": "yes"
+                        },
+                        "any_owned_province": {
+                            "has_province_modifier": "high_philosophy_school_origin_orange_sash"
+                        }
+                    }
+                },
+                "on_invite_scholar": {
+                    "if": {
+                        "limit": {
+                            "NOT": {
+                                "has_country_flag": "dhenijanraj_mission_free_invitations"
+                            },
+                            "has_country_flag": "L62_invite_scholar"
+                        },
+                        "add_adm_power": "-50"
+                    },
+                    "pasiragha_scholar_system": {
+                        "HP_SCHOOL": "orange_sash"
+                    },
+                    "clear_religious_scholar_modifiers_effect": "yes",
+                    "custom_tooltip": "INVITE_SCHOLAR_COUNTRY_TEXT",
+                    "add_country_modifier": {
+                        "name": "orange_sash_scholar_modifier duration=7300"
+                    },
+                    "hidden_effect": {
+                        "if": {
+                            "": ""
+                        }
+                    }
+                },
+                "invite_scholar_modifier_display": "orange_sash_scholar_modifier",
+                "picture": "GFX_icon_high_philosophy_school_orange_sash",
+                "yearly_corruption": "-0.1",
+                "legitimacy": "1",
+                "devotion": "0.5",
+                "republican_tradition": "0.3",
+                "monthly_piety_accelerator": "0.001"
+            },
+            "golden_palace_school": {
+                "potential_invite_scholar": {
+                    "always": "yes"
+                },
+                "can_invite_scholar": {
+                    "adm_power_cost": "50",
+                    "NOT": {
+                        "anb_has_religious_scholars_trigger": "yes"
+                    },
+                    "OR": {
+                        "AND": {
+                            "reverse_has_opinion": {
+                                "who": "FROM value=150"
+                            },
+                            "OR": {
+                                "alliance_with": "FROM",
+                                "is_subject_of": "FROM",
+                                "overlord_of": "FROM"
+                            },
+                            "hidden_progressive_opinion_for_scholar_trigger": "yes"
+                        },
+                        "any_owned_province": {
+                            "has_province_modifier": "high_philosophy_school_origin_golden_palace"
+                        }
+                    }
+                },
+                "on_invite_scholar": {
+                    "if": {
+                        "limit": {
+                            "NOT": {
+                                "has_country_flag": "dhenijanraj_mission_free_invitations"
+                            },
+                            "has_country_flag": "L62_invite_scholar"
+                        },
+                        "add_adm_power": "-50"
+                    },
+                    "pasiragha_scholar_system": {
+                        "HP_SCHOOL": "golden_palace"
+                    },
+                    "clear_religious_scholar_modifiers_effect": "yes",
+                    "custom_tooltip": "INVITE_SCHOLAR_COUNTRY_TEXT",
+                    "add_country_modifier": {
+                        "name": "golden_palace_scholar_modifier duration=7300"
+                    },
+                    "hidden_effect": {
+                        "if": {
+                            "": ""
+                        }
+                    }
+                },
+                "invite_scholar_modifier_display": "golden_palace_scholar_modifier",
+                "picture": "GFX_icon_high_philosophy_school_golden_palace",
+                "global_unrest": "-2",
+                "global_tax_modifier": "0.1",
+                "monthly_piety_accelerator": "0.001"
+            },
+            "unbroken_claw_school": {
+                "potential_invite_scholar": {
+                    "always": "yes"
+                },
+                "can_invite_scholar": {
+                    "adm_power_cost": "50",
+                    "NOT": {
+                        "anb_has_religious_scholars_trigger": "yes"
+                    },
+                    "OR": {
+                        "AND": {
+                            "reverse_has_opinion": {
+                                "who": "FROM value=150"
+                            },
+                            "OR": {
+                                "alliance_with": "FROM",
+                                "is_subject_of": "FROM",
+                                "overlord_of": "FROM"
+                            },
+                            "hidden_progressive_opinion_for_scholar_trigger": "yes"
+                        },
+                        "any_owned_province": {
+                            "has_province_modifier": "high_philosophy_school_origin_unbroken_claw"
+                        }
+                    }
+                },
+                "on_invite_scholar": {
+                    "if": {
+                        "limit": {
+                            "NOT": {
+                                "has_country_flag": "dhenijanraj_mission_free_invitations"
+                            },
+                            "has_country_flag": "L62_invite_scholar"
+                        },
+                        "add_adm_power": "-50"
+                    },
+                    "pasiragha_scholar_system": {
+                        "HP_SCHOOL": "unbroken_claw"
+                    },
+                    "clear_religious_scholar_modifiers_effect": "yes",
+                    "custom_tooltip": "INVITE_SCHOLAR_COUNTRY_TEXT",
+                    "add_country_modifier": {
+                        "name": "unbroken_claw_scholar_modifier duration=7300"
+                    },
+                    "hidden_effect": {
+                        "if": {
+                            "": ""
+                        }
+                    }
+                },
+                "invite_scholar_modifier_display": "unbroken_claw_scholar_modifier",
+                "picture": "GFX_icon_high_philosophy_school_unbroken_claw",
+                "shock_damage": "0.10",
+                "war_exhaustion": "-0.02",
+                "monthly_piety": "0.001"
+            },
+            "silk_turban_school": {
+                "potential_invite_scholar": {
+                    "always": "yes"
+                },
+                "can_invite_scholar": {
+                    "adm_power_cost": "50",
+                    "NOT": {
+                        "anb_has_religious_scholars_trigger": "yes"
+                    },
+                    "OR": {
+                        "AND": {
+                            "reverse_has_opinion": {
+                                "who": "FROM value=150"
+                            },
+                            "OR": {
+                                "alliance_with": "FROM",
+                                "is_subject_of": "FROM",
+                                "overlord_of": "FROM"
+                            },
+                            "hidden_progressive_opinion_for_scholar_trigger": "yes"
+                        },
+                        "any_owned_province": {
+                            "has_province_modifier": "high_philosophy_school_origin_silk_turban"
+                        }
+                    }
+                },
+                "on_invite_scholar": {
+                    "if": {
+                        "limit": {
+                            "NOT": {
+                                "has_country_flag": "dhenijanraj_mission_free_invitations"
+                            },
+                            "has_country_flag": "L62_invite_scholar"
+                        },
+                        "add_adm_power": "-50"
+                    },
+                    "pasiragha_scholar_system": {
+                        "HP_SCHOOL": "silk_turban"
+                    },
+                    "clear_religious_scholar_modifiers_effect": "yes",
+                    "custom_tooltip": "INVITE_SCHOLAR_COUNTRY_TEXT",
+                    "add_country_modifier": {
+                        "name": "silk_turban_scholar_modifier duration=7300"
+                    },
+                    "hidden_effect": {
+                        "if": {
+                            "": ""
+                        }
+                    }
+                },
+                "invite_scholar_modifier_display": "silk_turban_scholar_modifier",
+                "picture": "GFX_icon_high_philosophy_school_silk_turban",
+                "trade_efficiency": "0.1",
+                "merchants": "1",
+                "monthly_piety": "0.001"
+            },
+            "ascendant_soul_school": {
+                "potential_invite_scholar": {
+                    "always": "yes"
+                },
+                "can_invite_scholar": {
+                    "adm_power_cost": "50",
+                    "NOT": {
+                        "anb_has_religious_scholars_trigger": "yes"
+                    },
+                    "OR": {
+                        "AND": {
+                            "reverse_has_opinion": {
+                                "who": "FROM value=150"
+                            },
+                            "OR": {
+                                "alliance_with": "FROM",
+                                "is_subject_of": "FROM",
+                                "overlord_of": "FROM"
+                            },
+                            "hidden_progressive_opinion_for_scholar_trigger": "yes"
+                        },
+                        "any_owned_province": {
+                            "has_province_modifier": "high_philosophy_school_origin_ascendant_soul"
+                        }
+                    }
+                },
+                "on_invite_scholar": {
+                    "if": {
+                        "limit": {
+                            "NOT": {
+                                "has_country_flag": "dhenijanraj_mission_free_invitations"
+                            },
+                            "has_country_flag": "L62_invite_scholar"
+                        },
+                        "add_adm_power": "-50"
+                    },
+                    "pasiragha_scholar_system": {
+                        "HP_SCHOOL": "ascendant_soul"
+                    },
+                    "clear_religious_scholar_modifiers_effect": "yes",
+                    "custom_tooltip": "INVITE_SCHOLAR_COUNTRY_TEXT",
+                    "add_country_modifier": {
+                        "name": "ascendant_soul_scholar_modifier duration=7300"
+                    },
+                    "hidden_effect": {
+                        "if": {
+                            "": ""
+                        }
+                    }
+                },
+                "invite_scholar_modifier_display": "ascendant_soul_scholar_modifier",
+                "picture": "GFX_icon_high_philosophy_school_ascendant_soul",
+                "country_admin_power": "1",
+                "army_tradition": "0.5",
+                "monthly_piety_accelerator": "0.001"
+            },
+            "synthetic_truth_school": {
+                "potential_invite_scholar": {
+                    "always": "yes"
+                },
+                "can_invite_scholar": {
+                    "adm_power_cost": "50",
+                    "NOT": {
+                        "anb_has_religious_scholars_trigger": "yes"
+                    },
+                    "OR": {
+                        "AND": {
+                            "reverse_has_opinion": {
+                                "who": "FROM value=150"
+                            },
+                            "OR": {
+                                "alliance_with": "FROM",
+                                "is_subject_of": "FROM",
+                                "overlord_of": "FROM"
+                            },
+                            "hidden_progressive_opinion_for_scholar_trigger": "yes"
+                        },
+                        "any_owned_province": {
+                            "has_province_modifier": "high_philosophy_school_origin_synthetic_truth"
+                        }
+                    }
+                },
+                "on_invite_scholar": {
+                    "if": {
+                        "limit": {
+                            "NOT": {
+                                "has_country_flag": "dhenijanraj_mission_free_invitations"
+                            },
+                            "has_country_flag": "L62_invite_scholar"
+                        },
+                        "add_adm_power": "-50"
+                    },
+                    "pasiragha_scholar_system": {
+                        "HP_SCHOOL": "synthetic_truth"
+                    },
+                    "clear_religious_scholar_modifiers_effect": "yes",
+                    "custom_tooltip": "INVITE_SCHOLAR_COUNTRY_TEXT",
+                    "add_country_modifier": {
+                        "name": "synthetic_truth_scholar_modifier duration=7300"
+                    },
+                    "hidden_effect": {
+                        "if": {
+                            "": ""
+                        }
+                    }
+                },
+                "invite_scholar_modifier_display": "synthetic_truth_scholar_modifier",
+                "picture": "GFX_icon_high_philosophy_school_synthetic_truth",
+                "prestige": "1",
+                "technology_cost": "-0.05",
+                "monthly_piety": "-0.001"
+            },
+            "final_paradigm_school": {
+                "potential_invite_scholar": {
+                    "always": "yes"
+                },
+                "can_invite_scholar": {
+                    "adm_power_cost": "50",
+                    "NOT": {
+                        "anb_has_religious_scholars_trigger": "yes"
+                    },
+                    "OR": {
+                        "AND": {
+                            "reverse_has_opinion": {
+                                "who": "FROM value=150"
+                            },
+                            "OR": {
+                                "alliance_with": "FROM",
+                                "is_subject_of": "FROM",
+                                "overlord_of": "FROM"
+                            },
+                            "hidden_progressive_opinion_for_scholar_trigger": "yes"
+                        },
+                        "any_owned_province": {
+                            "has_province_modifier": "high_philosophy_school_origin_final_paradigm"
+                        }
+                    }
+                },
+                "on_invite_scholar": {
+                    "if": {
+                        "limit": {
+                            "NOT": {
+                                "has_country_flag": "dhenijanraj_mission_free_invitations"
+                            },
+                            "has_country_flag": "L62_invite_scholar"
+                        },
+                        "add_adm_power": "-50"
+                    },
+                    "clear_religious_scholar_modifiers_effect": "yes",
+                    "custom_tooltip": "INVITE_SCHOLAR_COUNTRY_TEXT",
+                    "hidden_effect": {
+                        "if": {
+                            "": ""
+                        }
+                    }
+                },
+                "invite_scholar_modifier_display": "final_paradigm_scholar_modifier",
+                "picture": "GFX_icon_high_philosophy_school_final_paradigm",
+                "warscore_cost_vs_other_religion": "-0.1",
+                "autonomy_change_time": "-0.25",
+                "monthly_piety": "0.001"
+            },
+            "piercing_fang_school": {
+                "potential_invite_scholar": {
+                    "OR": {
+                        "culture": "silent_harimari",
+                        "is_year": "1550"
+                    }
+                },
+                "can_invite_scholar": {
+                    "adm_power_cost": "50",
+                    "NOT": {
+                        "anb_has_religious_scholars_trigger": "yes"
+                    },
+                    "OR": {
+                        "AND": {
+                            "reverse_has_opinion": {
+                                "who": "FROM value=150"
+                            },
+                            "OR": {
+                                "alliance_with": "FROM",
+                                "is_subject_of": "FROM",
+                                "overlord_of": "FROM"
+                            },
+                            "hidden_progressive_opinion_for_scholar_trigger": "yes"
+                        },
+                        "any_owned_province": {
+                            "has_province_modifier": "high_philosophy_school_origin_piercing_fang"
+                        }
+                    }
+                },
+                "on_invite_scholar": {
+                    "if": {
+                        "limit": {
+                            "NOT": {
+                                "has_country_flag": "dhenijanraj_mission_free_invitations"
+                            },
+                            "has_country_flag": "L62_invite_scholar"
+                        },
+                        "add_adm_power": "-50"
+                    },
+                    "clear_religious_scholar_modifiers_effect": "yes",
+                    "custom_tooltip": "INVITE_SCHOLAR_COUNTRY_TEXT",
+                    "add_country_modifier": {
+                        "name": "piercing_fang_scholar_modifier duration=7300"
+                    },
+                    "hidden_effect": {
+                        "if": {
+                            "": ""
+                        }
+                    }
+                },
+                "invite_scholar_modifier_display": "piercing_fang_scholar_modifier",
+                "picture": "GFX_icon_high_philosophy_school_piercing_fang",
+                "morale_damage_received": "-0.1",
+                "movement_speed": "0.1",
+                "monthly_piety": "0.001"
+            }
+        },
+        "high_philosophy": {
+            "color": [
+                "73",
+                "9",
+                "96"
+            ],
+            "icon": "32",
+            "allowed_conversion": [
+                "suhans_praxis"
+            ],
+            "country": {
+                "advisor_pool": "1",
+                "stability_cost_modifier": "-0.2"
+            },
+            "country_as_secondary": {
+                "reform_progress_growth": "0.1",
+                "stability_cost_modifier": "-0.15"
+            },
+            "province": {
+                "local_missionary_strength": "-0.01"
+            },
+            "on_convert": {
+                "change_religion": "high_philosophy",
+                "add_prestige": "-100",
+                "add_country_modifier": {
+                    "name": "conversion_zeal",
+                    "duration": "3650"
+                }
+            },
+            "heretic": [
+                "RAHENI_GODS"
+            ],
+            "uses_piety": "yes"
+        },
+        "suhans_praxis": {
+            "color": [
+                "193",
+                "105",
+                "228"
+            ],
+            "icon": "75",
+            "allowed_conversion": {},
+            "allowed_center_conversion": [
+                "high_philosophy"
+            ],
+            "will_get_center": {
+                "NOT": {
+                    "has_global_flag": "suhan_reformation_over"
+                },
+                "any_owned_province": {
+                    "can_have_center_of_reformation_trigger": {
+                        "RELIGION": "suhans_praxis"
+                    }
+                }
+            },
+            "country": {
+                "infantry_power": "0.10",
+                "global_heretic_missionary_strength": "0.02"
+            },
+            "country_as_secondary": {
+                "infantry_power": "0.10",
+                "global_missionary_strength": "0.01"
+            },
+            "province": {
+                "local_missionary_strength": "-0.02"
+            },
+            "on_convert": {
+                "change_religion": "suhans_praxis",
+                "country_event": {
+                    "id": "high_philosophy_events.12"
+                },
+                "if": [
+                    {
+                        "limit": {
+                            "NOT": {
+                                "has_country_flag": "emperor_religion_change"
+                            }
+                        },
+                        "add_prestige": "-100",
+                        "add_country_modifier": {
+                            "name": "conversion_zeal",
+                            "duration": "3650"
+                        }
+                    },
+                    {
+                        "limit": {
+                            "NOT": {
+                                "calc_true_if": {
+                                    "all_province": {
+                                        "religion": "suhans_praxis",
+                                        "is_reformation_center": "yes"
+                                    },
+                                    "amount": "3"
+                                }
+                            }
+                        },
+                        "hidden_effect": {
+                            "random_owned_province": {
+                                "limit": {
+                                    "can_have_center_of_reformation_trigger": {
+                                        "RELIGION": "suhans_praxis"
+                                    }
+                                },
+                                "change_religion": "suhans_praxis",
+                                "add_reform_center": "suhans_praxis"
+                            }
+                        },
+                        "custom_tooltip": "CENTER_OF_REFORMATION_POSSIBLE"
+                    }
+                ]
+            },
+            "uses_anglican_power": "yes",
+            "aspects": [
+                "examine_philosophies",
+                "debate_nature_of_praxis",
+                "liberation_of_the_sexes",
+                "all_walk_nitikamarja",
+                "guru_diplomacy",
+                "horizons_of_mind",
+                "promote_school_unity",
+                "paradigmatic_zeal"
+            ],
+            "aspects_name": "ANGLICAN_ASPECTS",
+            "heretic": [
+                "RAHENI_GODS"
+            ],
+            "date": "1500.1.1"
+        },
+        "harmonized_modifier": "harmonized_raheni",
+        "crusade_name": "VISVATMAYUDH"
+    }
+}

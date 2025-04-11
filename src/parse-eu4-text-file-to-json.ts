@@ -38,13 +38,26 @@ export const parseEu4TextFileToJson = async(
       // This is in the format "property_name = { ... }"
       const splitCleanedRow = cleanedRow.split('=').map((element) => element.trim());
       const propertyName = splitCleanedRow[0].trim();
-      const propertyValue = splitCleanedRow.slice(1).join('=').trim();
+      let propertyValue = splitCleanedRow.slice(1).join('=').trim();
 
       if(/^({)?(\ )*([a-zA-Z0-9'_\.-])+(\ )*=(\ )*(.)*$/.test(propertyValue)) {
         // This is in the format "property_name = { inner_property_name = 123456 }" OR
         // This is in the format "property_name = { inner_property_name = { inner_inner_property_name = 1000 }}"
         // In that second example, we need to have some kind of loop here to keep digging deeper into the since inner_inner_property_name could
         // also have a json object as a key.
+
+        const numberOfOpeningCurlyBraces = (cleanedRow.match(/{/g) ?? []).length;
+        const numberOfClosingCurlyBraces = (cleanedRow.match(/}/g) ?? []).length;
+        const numberOfNestingLevelsThatShouldRemainAtTheEnd = numberOfOpeningCurlyBraces - numberOfClosingCurlyBraces;
+
+        if(numberOfNestingLevelsThatShouldRemainAtTheEnd > 0) {
+          propertyValue = propertyValue.concat('}'.repeat(numberOfNestingLevelsThatShouldRemainAtTheEnd));
+        }
+
+        // console.log('numberOfOpeningCurlyBraces', numberOfOpeningCurlyBraces)
+        // console.log('numberOfClosingCurlyBraces', numberOfClosingCurlyBraces)
+        // console.log('numberOfNestingLevelsThatShouldRemainAtTheEnd', numberOfNestingLevelsThatShouldRemainAtTheEnd)
+        // console.log('propertyValue', propertyValue)
 
         currentKeyToPushTo = `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? seperator : ''}${propertyName}`;
 
@@ -63,11 +76,18 @@ export const parseEu4TextFileToJson = async(
           .replace(/}$/, '')
           .trim();
 
-        while(/^{(.)*}$/.test(currentValueToEvaluate)) {
+        while(/^{(.)*}.*$/.test(currentValueToEvaluate)) {
+          const portionBeforeCurlyBraces = currentValueToEvaluate.match(/^.*{/g)?.at(0)?.slice(1) ?? '';
+          const portionAfterCurlyBraces = currentValueToEvaluate.match(/}.*$/g)?.at(0)?.slice(1) ?? '';
+          const insideCurlyBracePortion = currentValueToEvaluate.slice(
+            portionBeforeCurlyBraces.length,
+            portionAfterCurlyBraces.length !== 0 ? -portionAfterCurlyBraces.length : undefined
+          );
+
           currentKeyToPushTo = `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? seperator : ''}${currentKeyToEvaluate}`;
           levelsNestedThatNeedToBeUnNested += 1;
 
-          currentKeyValuePairToEvaluate = currentValueToEvaluate;
+          currentKeyValuePairToEvaluate = insideCurlyBracePortion.slice(1, -1);
           currentKeyToEvaluate = currentKeyValuePairToEvaluate
             .split('=')[0]
             .trim()
@@ -88,7 +108,7 @@ export const parseEu4TextFileToJson = async(
           valueToPush: currentValueToEvaluate
         });
 
-        while(levelsNestedThatNeedToBeUnNested > 0) {
+        while(levelsNestedThatNeedToBeUnNested > numberOfNestingLevelsThatShouldRemainAtTheEnd) {
           currentKeyToPushTo = currentKeyToPushTo
             .split(seperator)
             .slice(0, -1)

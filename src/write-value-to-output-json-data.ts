@@ -18,6 +18,9 @@ export const writeValueToOutputJSONData = (
     const key = splitKey[0];
     const currentArrayValueForKey = input.outputJSONData?.[key];
 
+    // console.log('key', key)
+    // console.log('valueToPush', valueToPush)
+
     if(
       valueOrNestedValueIsString(valueToPush) &&
       valueOrNestedValueIsString(currentArrayValueForKey)
