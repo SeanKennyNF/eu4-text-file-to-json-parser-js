@@ -32,9 +32,7 @@
                 "change_religion": "bulwari_sun_cult",
                 "if": {
                     "limit": {
-                        "NOT": {
-                            "has_country_flag": "updating_isolationism_window"
-                        }
+                        "has_country_flag": "updating_isolationism_window"
                     },
                     "add_prestige": "-100",
                     "add_country_modifier": {

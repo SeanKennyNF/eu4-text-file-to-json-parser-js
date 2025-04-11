@@ -54,6 +54,11 @@ export const parseEu4TextFileToJson = async(
           propertyValue = propertyValue.concat('}'.repeat(numberOfNestingLevelsThatShouldRemainAtTheEnd));
         }
 
+        // console.log('numberOfOpeningCurlyBraces', numberOfOpeningCurlyBraces)
+        // console.log('numberOfClosingCurlyBraces', numberOfClosingCurlyBraces)
+        // console.log('numberOfNestingLevelsThatShouldRemainAtTheEnd', numberOfNestingLevelsThatShouldRemainAtTheEnd)
+        // console.log('propertyValue', propertyValue)
+
         currentKeyToPushTo = `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? seperator : ''}${propertyName}`;
 
         let levelsNestedThatNeedToBeUnNested = 1;
@@ -71,11 +76,18 @@ export const parseEu4TextFileToJson = async(
           .replace(/}$/, '')
           .trim();
 
-        while(/^{(.)*}$/.test(currentValueToEvaluate)) {
+        while(/^{(.)*}.*$/.test(currentValueToEvaluate)) {
+          const portionBeforeCurlyBraces = currentValueToEvaluate.match(/^.*{/g)?.at(0)?.slice(1) ?? '';
+          const portionAfterCurlyBraces = currentValueToEvaluate.match(/}.*$/g)?.at(0)?.slice(1) ?? '';
+          const insideCurlyBracePortion = currentValueToEvaluate.slice(
+            portionBeforeCurlyBraces.length,
+            portionAfterCurlyBraces.length !== 0 ? -portionAfterCurlyBraces.length : undefined
+          );
+
           currentKeyToPushTo = `${currentKeyToPushTo}${currentKeyToPushTo.length > 0 ? seperator : ''}${currentKeyToEvaluate}`;
           levelsNestedThatNeedToBeUnNested += 1;
 
-          currentKeyValuePairToEvaluate = currentValueToEvaluate;
+          currentKeyValuePairToEvaluate = insideCurlyBracePortion.slice(1, -1);
           currentKeyToEvaluate = currentKeyValuePairToEvaluate
             .split('=')[0]
             .trim()
