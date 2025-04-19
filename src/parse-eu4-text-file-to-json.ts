@@ -34,13 +34,13 @@ export const parseEu4TextFileToJson = async(
 
     if(!cleanedRow) {
       //Do nothing, this is either an empty line or was a comment before our cleaning.
-    } else if(/^([a-zA-Z0-9'_\.-])+(\ )*=(\ )*{([a-zA-Z0-9'_\ /".\-='{}])*}$/.test(cleanedRow)) {
+    } else if(/^([a-zA-Z0-9'_\.-:])+(\ )*=(\ )*{([a-zA-Z0-9'_\ /".\-='{}])*}$/.test(cleanedRow)) {
       // This is in the format "property_name = { ... }"
       const splitCleanedRow = cleanedRow.split('=').map((element) => element.trim());
       const propertyName = splitCleanedRow[0].trim();
       let propertyValue = splitCleanedRow.slice(1).join('=').trim();
 
-      if(/^({)?(\ )*([a-zA-Z0-9'_\.-])+(\ )*=(\ )*(.)*$/.test(propertyValue)) {
+      if(/^({)?(\ )*([a-zA-Z0-9'_\.-:])+(\ )*=(\ )*(.)*$/.test(propertyValue)) {
         // This is in the format "property_name = { inner_property_name = 123456 }" OR
         // This is in the format "property_name = { inner_property_name = { inner_inner_property_name = 1000 }}"
         // In that second example, we need to have some kind of loop here to keep digging deeper into the since inner_inner_property_name could
@@ -131,7 +131,7 @@ export const parseEu4TextFileToJson = async(
           valueToPush: elements
         });
       }
-    } else if(/^([a-zA-Z0-9'_\.-])+(\ )*=(\ )*{$/.test(cleanedRow)) {
+    } else if(/^([a-zA-Z0-9'_\.-:])+(\ )*=(\ )*{$/.test(cleanedRow)) {
       // This is in the format "property_name = {"
       const splitCleanedRow = cleanedRow.split('=').map((element) => element.trim());
       const propertyName = splitCleanedRow[0];
@@ -151,7 +151,7 @@ export const parseEu4TextFileToJson = async(
         .split(seperator)
         .slice(0, -1)
         .join(seperator);
-    } else if(/^([a-zA-Z0-9'_\.-])+(\ )*=(\ )*([a-zA-Z0-9 _./\-'"])+$/.test(cleanedRow)) {
+    } else if(/^([a-zA-Z0-9'_\.-:])+(\ )*=(\ )*([a-zA-Z0-9 _./\-'"])+$/.test(cleanedRow)) {
       // This is in the format "property_name = value"
       const splitCleanedRow = cleanedRow.split('=').map((element) => element.trim());
       const propertyName = splitCleanedRow[0];

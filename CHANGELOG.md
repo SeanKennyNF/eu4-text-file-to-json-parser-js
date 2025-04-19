@@ -98,3 +98,7 @@ add_permanent_province_modifier = {
 - `typescript` from `5.7.2` to `5.8.3` (development dependency)
 - `vitest` from `2.1.8` to `3.1.1` (development dependency)
 - `@types/node` from `22.10.2` to `22.14.0` (development dependency)
+
+## Version 0.1.16 - April 18th 2025
+
+- Added `:` to the list of allowed characters in property names
